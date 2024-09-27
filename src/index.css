@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 :root {
-  --font-mont: "Montserrat", sans-serif;;
+  --font-mont: "Montserrat", sans-serif;
   --font-code: "Source Code Pro", monospace;
   color-scheme: dark;
 }

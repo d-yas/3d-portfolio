@@ -12,9 +12,9 @@ export default {
     extend: {
       colors: {
         color: {
-          1: "#AC6AFF",
-          2: "#FFC876",
-          3: "#FF776F",
+          red: "#9A2626",
+          blue: "#312EB2",
+          aqua: "#69C9FF",
           4: "#7ADB78",
           5: "#858DFF",
           6: "#FF98E2",
@@ -39,9 +39,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["var(--font-sora)", ...fontFamily.sans],
+        sans: ["var(--font-mont)", ...fontFamily.sans],
         code: "var(--font-code)",
-        grotesk: "var(--font-grotesk)",
       },
       letterSpacing: {
         tagline: ".15em",
@@ -120,10 +119,6 @@ export default {
         },
         ".caption": {
           "@apply text-sm": {},
-        },
-        ".tagline": {
-          "@apply font-grotesk font-light text-xs tracking-tagline uppercase":
-            {},
         },
         ".quote": {
           "@apply font-code text-lg leading-normal": {},
