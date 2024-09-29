@@ -23,15 +23,16 @@ void main()
     vec3 light = vec3(0.0);
 
     light += pointLight(
-        vec3(1.0),
-        10.0,
+        vec3(0.15),
+        3.0,
         normal,
-        vec3(0.0, 0.25, 0.0),
+        vec3(1.0, 0.25, 0.0),
         viewDirection,
-        30.0,
+        11.0,
         vPosition,
-        0.95
+        0.5
     );
+    /* light += ambientLight(vec3(1.0), 0.5); */
     
     color *= light;
     

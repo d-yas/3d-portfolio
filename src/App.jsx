@@ -1,7 +1,10 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Three from "./components/Three";
 import RagingSea from "./components/RagingSea";
 import { Canvas } from '@react-three/fiber'
+import { Stars } from '@react-three/drei'
+
 
 
 
@@ -16,17 +19,9 @@ const App = () => {
     <>
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Header />
-        <Hero />
-        <Canvas className="fixed top-0 left-0 w-full h-full bg-w"
-          camera={ {
-              fov: 45,
-              near: 0.1,
-              far: 200,
-              position: [ 4, - 2, 6 ]
-          } }
-      >
-          <RagingSea />
-      </Canvas>
+  
+        <Three />
+        
         
       </div>
     </>

@@ -4,7 +4,7 @@ import Button from "./Utils/Button";
 const Header = () => {
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:flex lg:items-center lg:justify-between lg:mx-auto lg:backdrop-blur-sm`}
+      className={`bg-black fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:flex lg:items-center lg:justify-between lg:mx-auto lg:backdrop-blur-sm`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4 ">
         <a
