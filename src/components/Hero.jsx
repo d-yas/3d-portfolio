@@ -4,7 +4,7 @@ import Section from "./Utils/Section"
 
 const Hero = () => {
   return (
-    <Section id={"hero"}>
+    <Section normal id={"hero"}>
         <div className="flex flex-col items-center w-full">
             <h5 className="h5 flex flex-col flex-nowrap w-36 uppercase font-mont font-semibold">
                 {heroText.title}

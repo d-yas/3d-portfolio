@@ -24,9 +24,9 @@ void main()
 
     light += pointLight(
         vec3(0.15),
-        3.0,
+        3.0, /* Contrast */
         normal,
-        vec3(1.0, 0.25, 0.0),
+        vec3(0.4, 0.45, -0.1),
         viewDirection,
         11.0,
         vPosition,

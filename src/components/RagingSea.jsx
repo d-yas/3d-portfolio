@@ -13,20 +13,20 @@ const WaterMaterial = shaderMaterial(
   {
     uTime: 0,
 
-    uBigWavesElevation: 0.1,
+    uBigWavesElevation: 0.2,
     uBigWavesFrequency: new THREE.Vector2(4, 1.5),
-    uBigWavesSpeed: 0.55,
+    uBigWavesSpeed: 0.75,
 
-    uSmallWavesElevation: 0.1,
+    uSmallWavesElevation: 0.15,
     uSmallWavesFrequency: 3,
     uSmallWavesSpeed: 0.2,
     uSmallIterations: 4,
 
-    uSurfaceColor: new THREE.Color(0.192, 0.18, 0.698), // For #312EB2
-    uDepthColor: new THREE.Color(0, 0, 0), // For #9A2626
+    uSurfaceColor: new THREE.Color(0.098, 0.4, 0.565), // For #186691
+    uDepthColor: new THREE.Color(0.608, 0.847, 1.0), // For #9bd8ff    
 
-    uColorOffset: 0.95,
-    uColorMultiplier: 1,
+    uColorOffset: 0.11,
+    uColorMultiplier: 8,
   },
   waterVertex,
   waterFragment
@@ -40,13 +40,22 @@ export default function RagingSea() {
   });
   return (
     <>
-      
-        <mesh position={[0, -0., 0]} rotation-x={-Math.PI * 0.5} scale={1}>
-          <planeGeometry args={[2, 2, 512, 512]} />
+      <PresentationControls
+        global /* Sadece modele tıklayıp değil her yerden çevirebilmek için */
+        polar={[-0.1, 0.25]} /* limit the vertical rotations */
+        azimuth={[0, 0]} /* limit the vertical rotations */
+        /* limit the horizontal rotations */
+        config={{
+          mass: 2,
+          tension: 400,
+        }} /* Çevirince laptop biraz sallanır. Fizik ekler */
+        snap={{ mass: 4, tension: 400 }} /* Bırakınca geri dönmesini sağlar. */
+      >
+        <mesh rotation-x={-Math.PI * 0.5} scale={2}>
+          <planeGeometry args={[2, 2, 1024, 1024]} />
           <waterMaterial ref={waterMaterial} />
         </mesh>
-      <OrbitControls  makeDefault/>
+      </PresentationControls>
     </>
   );
 }
-/* Orbit kontroller sınırlanacak canvas bölümlenmesi bakılack */
