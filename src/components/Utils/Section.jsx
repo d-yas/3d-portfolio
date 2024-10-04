@@ -10,15 +10,11 @@ const Section = ({ id, className = "", children, three, stars, normal }) => {
         </div>
       )}
       {three && (
-        <div id={id} className={`top-0 left-0 ${className}`}>
+        <div id={id} className={`top-0 left-0 h-screen bg-black ${className}`}>
           {children}
         </div>
       )}
-      {stars && (
-        <div id={id} className={`top-0 left-0 absolute h-screen w-full ${className}`}>
-          {children}
-        </div>
-      )}
+
     </>
   );
 };

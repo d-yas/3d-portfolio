@@ -15,14 +15,7 @@ const Star = () => {
           position: [4, -2, 6],
         }}
       >
-        <Stars
-        radius={1}  // Yıldızların yayılacağı kürenin yarıçapı
-        depth={100}    // Yıldızların ne kadar uzağa yerleştirileceği
-        count={5000}  // Toplam yıldız sayısı
-        factor={2.5}    // Yıldızların yoğunluğu ve parlaklığı
-        saturation={0} // Yıldızların rengindeki doygunluk
-        fade={true}    // Uzak yıldızların soluklaşmasını sağlar
-      />
+        
         
       </Canvas>
     </Section>

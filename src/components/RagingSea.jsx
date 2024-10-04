@@ -13,20 +13,20 @@ const WaterMaterial = shaderMaterial(
   {
     uTime: 0,
 
-    uBigWavesElevation: 0.2,
+    uBigWavesElevation: 0.17,
     uBigWavesFrequency: new THREE.Vector2(4, 1.5),
     uBigWavesSpeed: 0.75,
 
-    uSmallWavesElevation: 0.15,
-    uSmallWavesFrequency: 3,
+    uSmallWavesElevation: 0.03,
+    uSmallWavesFrequency: 2,
     uSmallWavesSpeed: 0.2,
-    uSmallIterations: 4,
+    uSmallIterations: 3,
 
-    uSurfaceColor: new THREE.Color(0.098, 0.4, 0.565), // For #186691
-    uDepthColor: new THREE.Color(0.608, 0.847, 1.0), // For #9bd8ff    
+    uSurfaceColor: new THREE.Color(0.507, 0.196, 0.902), // Surface color (#6832E6)
+    uDepthColor: new THREE.Color(0.986, 0.114, 0.304), // Depth color (#E21D9A)
 
-    uColorOffset: 0.11,
-    uColorMultiplier: 8,
+    uColorOffset: 0.1,
+    uColorMultiplier: 4,
   },
   waterVertex,
   waterFragment
@@ -42,17 +42,15 @@ export default function RagingSea() {
     <>
       <PresentationControls
         global /* Sadece modele tıklayıp değil her yerden çevirebilmek için */
-        polar={[-0.1, 0.25]} /* limit the vertical rotations */
-        azimuth={[0, 0]} /* limit the vertical rotations */
-        /* limit the horizontal rotations */
+        polar={[-0.04, 0.07]} /* limit the vertical rotations */
         config={{
-          mass: 2,
+          mass: 1,
           tension: 400,
         }} /* Çevirince laptop biraz sallanır. Fizik ekler */
         snap={{ mass: 4, tension: 400 }} /* Bırakınca geri dönmesini sağlar. */
       >
         <mesh rotation-x={-Math.PI * 0.5} scale={2}>
-          <planeGeometry args={[2, 2, 1024, 1024]} />
+          <planeGeometry args={[2, 2, 512, 512]} />
           <waterMaterial ref={waterMaterial} />
         </mesh>
       </PresentationControls>
