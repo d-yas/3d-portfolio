@@ -22,7 +22,7 @@ const Canvassed = () => {
           position: [-2.6, 1.2, 1],
         }}
       >
-        <Perf position="top-left" />
+        {/* <Perf position="top-left" /> */}
         <OrbitControls makeDefault />
         <Float>
           <Island scale={0.23} position={[0.34, -2.1, 0.5]} />
