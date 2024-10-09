@@ -1,16 +1,20 @@
 import RagingSea from "./RagingSea";
 import { Canvas } from "@react-three/fiber";
 import Section from "./Utils/Section";
-import { Center, Float, Html, Sparkles, Stars } from "@react-three/drei";
+import {
+  Center,
+  Float,
+  Html,
+  Sparkles,
+  OrbitControls,
+} from "@react-three/drei";
 import { Perf } from "r3f-perf";
-import Hero from "./Hero";
 import Island from "./Island";
-
 
 const Canvassed = () => {
   return (
     <Section three className="pt-[4.75rem] lg:pt-[5.25rem]">
-      <Canvas 
+      <Canvas
         camera={{
           fov: 50,
           near: 0.1,
@@ -19,13 +23,16 @@ const Canvassed = () => {
         }}
       >
         <Perf position="top-left" />
-
+        <OrbitControls makeDefault />
+        <Float>
+          <Island scale={0.23} position={[0.34, -2.1, 0.5]} />
+          <ambientLight />
+        </Float>
         <Center>
           <Html zIndexRange={[2, 0]} position={[0, 1, -0.1]}>
             {/* <Hero /> */}
           </Html>
           <Float>
-            <Island />
             <RagingSea />
           </Float>
         </Center>
