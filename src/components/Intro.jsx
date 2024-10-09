@@ -1,18 +1,12 @@
 
 const Intro = () => {
   return (
-    <div className="uppercase font-code flex flex-col flex-nowrap w-full">
-        <h3 className={`h3 font-semibold whitespace-nowrap tracking-tight `}>Data Enthusiast &</h3>
-        <h3 className={`h3 font-semibold whitespace-nowrap tracking-tight -mt-2 `}>Creative Developer</h3>
-        <div className={`p-1`}>
-            <p className={`text-xs font-code font-light text-n-3 mt-3`}>
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, hic aut reiciendis sit placeat adipisci id incidunt animi cumque doloremque fuga, sapiente ipsum corrupti libero similique pariatur laboriosam consequuntur totam.   
-            </p>
-            <p className={`text-xs font-code font-light text-n-3 mt-3`}>
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, hic aut reiciendis sit placeat adipisci id incidunt animi cumque doloremque fuga, sapiente ipsum corrupti libero similique pariatur laboriosam consequuntur totam.   
-            </p>
+    <section className="w-full h-screen top-0 left-0 bg-red-200">
+        <img src="./bg-grad.jpeg" alt="Desktop" className="w-full h-screen fixed z-0" />
+        <div className="fixed top-0 h-8 w-full flex flex-row bg-black">
+
         </div>
-    </div>
+    </section>
   )
 }
 

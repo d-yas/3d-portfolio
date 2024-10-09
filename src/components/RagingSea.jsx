@@ -41,13 +41,13 @@ export default function RagingSea() {
   return (
     <>
       <PresentationControls
-        global /* Sadece modele tıklayıp değil her yerden çevirebilmek için */
-        polar={[-0.04, 0.07]} /* limit the vertical rotations */
+        global 
+        polar={[-0.04, 0.07]} 
         config={{
           mass: 1,
           tension: 400,
-        }} /* Çevirince laptop biraz sallanır. Fizik ekler */
-        snap={{ mass: 4, tension: 400 }} /* Bırakınca geri dönmesini sağlar. */
+        }} 
+        snap={{ mass: 4, tension: 400 }} 
       >
         <mesh rotation-x={-Math.PI * 0.5} scale={2}>
           <planeGeometry args={[2, 2, 512, 512]} />
