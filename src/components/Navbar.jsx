@@ -22,10 +22,10 @@ const Navbar = () => {
     <div className="fixed top-0 left-0 h-8 w-full flex flex-row bg-black pointer-events-none">
       <div className={`w-1/2 flex items-center`}>
         <img
-          src="./apple.png"
+          src="./logo.png"
           alt="logo"
-          width={24}
-          height={24}
+          width={20}
+          height={20}
           className={`ml-6 p-0.5 `}
         />
         <span className={`mt-0.5 uppercase font-bold ml-6 text-sm`}>
