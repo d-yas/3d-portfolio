@@ -50,48 +50,113 @@ const Intro = () => {
         </div>
       </div>
 
-      <div className="absolute w-full h-screen flex justify-end items-start gap-15 ">
-        <div className="relative mt-16 right-5 flex flex-col items-center justify-center transition-all duration-300 ease-in-out hover:scale-125 hover:shadow-lg">
-          <img src="./code-folder.png" height={100} width={100} />
-          <label className="-mt-1 uppercase font-code font-bold text-sm">
-            Web Projects
-          </label>
+      <div className={`absolute w-full h-screen flex flex-col justify-between`}>
+        {/* Folders */}
+        <div className={`flex gap-15 justify-end mx-15 border `}>
+          <div className="relative mt-16 right-5 flex flex-col items-center justify-center transition-all duration-300 ease-in-out hover:scale-125 hover:shadow-lg">
+            <img src="./code-folder.png" height={100} width={100} />
+            <label className="-mt-1 uppercase font-code font-bold text-sm">
+              Web Projects
+            </label>
+          </div>
+
+          <div className="relative mt-16 right-5 flex flex-col items-center justify-center transition-all duration-300 ease-in-out hover:scale-125 hover:shadow-lg">
+            <img
+              src="./code-folder.png"
+              height={100}
+              width={100}
+              className="transition-all duration-300 ease-in-out"
+            />
+            <label className="-mt-1 uppercase font-code font-bold text-sm ring-indigo-500 transition-all duration-300 ease-in-out">
+              Data Projects
+            </label>
+          </div>
+
+          <div className="relative mt-16 right-5 flex flex-col items-center justify-center transition-all duration-300 ease-in-out hover:scale-125 hover:shadow-lg">
+            <img
+              src="./user-folder.png"
+              height={100}
+              width={100}
+              className="transition-all duration-300 ease-in-out"
+            />
+            <label className="uppercase font-code font-bold text-sm ring-indigo-500 transition-all duration-300 ease-in-out">
+              Profile
+            </label>
+          </div>
         </div>
 
-        <div className="relative mt-16 right-5 flex flex-col items-center justify-center transition-all duration-300 ease-in-out hover:scale-125 hover:shadow-lg">
-          <img
-            src="./code-folder.png"
-            height={100}
-            width={100}
-            className="transition-all duration-300 ease-in-out"
-          />
-          <label className="-mt-1 uppercase font-code font-bold text-sm ring-indigo-500 transition-all duration-300 ease-in-out">
-            Data Projects
-          </label>
-        </div>
+        {/* Folder look */}
+        <div className={`flex border justify-center items-center h-3/4 w-full`}>
+          <div
+            className={`bg-black w-1/2 h-5/6 mb-10 rounded-lg flex  border-4 border-n-2 border-opacity-50`}
+          >
+            {/* Sidebar */}
+            <div
+              className={`text-slate-100 flex flex-col px-10 pt-4 bg-slate-800 rouned-lx gap-4`}
+            >
+              <div class="w-4 h-4 bg-red-400 rounded-full -mx-6"></div>
 
-        <div className="relative mt-16 right-5 flex flex-col items-center justify-center transition-all duration-300 ease-in-out hover:scale-125 hover:shadow-lg">
-          <img
-            src="./user-folder.png"
-            height={100}
-            width={100}
-            className="transition-all duration-300 ease-in-out"
-          />
-          <label className="uppercase font-code font-bold text-sm ring-indigo-500 transition-all duration-300 ease-in-out">
-            Profile
-          </label>
+              <div className={`flex gap-3 border w-full`}>
+                <img src="./user-folder.png" className={`h-5`} alt="" />
+                <span
+                  className={`text-sm font-code text-nowrap uppercase font-medium`}
+                >
+                  Profile
+                </span>
+              </div>
+              <div className={`flex items-center gap-3 border w-full`}>
+                <img src="./code-folder.png" className={`h-5`} alt="" />
+                <span
+                  className={`text-sm font-code text-nowrap uppercase font-medium`}
+                >
+                  Data Projects
+                </span>
+              </div>
+              <div className={`flex items-center gap-3 border w-full`}>
+                <img src="./code-folder.png" className={`h-5`} alt="" />
+                <span
+                  className={`text-sm font-code text-nowrap uppercase font-medium`}
+                >
+                  Web Projects
+                </span>
+              </div>
+            </div>
+            {/* Main Bar */}
+            <div className={`text-black flex flex-col  bg-slate-400 w-full`}>
+              <div
+                className={`w-full border p-2 bg-slate-900 text-slate-100 uppercase text-lg font-bold leading-5 tracking-wide`}
+              >
+                Folder Title
+              </div>
+              <div className={`flex`}>
+                {/* Project names */}
+                <div className={`w-1/3 border flex flex-col`}>
+                  <div>dd</div>
+                  <div>dd</div>
+                  <div>dd</div>
+                </div>
+                {/* Project details */}
+                <div
+                  className={`flex flex-col justify-center items-center w-3/4`}
+                >
+                  description
+                  {/* Deniz burada kaldın layoutu bitir sonra bunu ayrı bi componente al */}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="absolute w-full h-screen flex justify-center gap-3 items-end py-5 ">
-        <div className="hover:scale-150 transform transition duration-300 shadow-lg">
-          <img src="./insta.png" width={50} alt="insta" />
-        </div>
-        <div className="hover:scale-150 transform transition duration-300">
-          <img src="./linkedin.png" width={50} alt="linkedin" />
-        </div>
-        <div className="hover:scale-150 transform transition duration-300">
-          <img src="./github.png" width={50} alt="github" />
+        {/* Bottom part */}
+        <div className="flex justify-center border border-red-500 gap-3 items-end py-5 ">
+          <div className="hover:scale-150 transform transition duration-300 shadow-lg">
+            <img src="./insta.png" width={50} alt="insta" />
+          </div>
+          <div className="hover:scale-150 transform transition duration-300">
+            <img src="./linkedin.png" width={50} alt="linkedin" />
+          </div>
+          <div className="hover:scale-150 transform transition duration-300">
+            <img src="./github.png" width={50} alt="github" />
+          </div>
         </div>
       </div>
     </section>
