@@ -8,8 +8,8 @@ const Files = ({ setActiveComponent, setIsFolderVisible }) => {
           setIsFolderVisible(true); // Ensure the Folder component is visible
         }}
       >
-        <img src="./code-folder.png" height={100} width={100} alt="Web Projects" />
-        <label className="-mt-1 uppercase font-code font-bold text-sm">Web Projects</label>
+        <img src="./code-folder.png" height={60} width={60} alt="Web Projects" />
+        <label className=" uppercase font-code font-bold text-sm">Web Projects</label>
       </div>
 
       <div
@@ -19,7 +19,7 @@ const Files = ({ setActiveComponent, setIsFolderVisible }) => {
           setIsFolderVisible(true); // Ensure the Folder component is visible
         }}
       >
-        <img src="./code-folder.png" height={100} width={100} alt="Data Projects" />
+        <img src="./code-folder.png" height={60} width={60} alt="Data Projects" />
         <label className="-mt-1 uppercase font-code font-bold text-sm">Data Projects</label>
       </div>
 
@@ -30,7 +30,7 @@ const Files = ({ setActiveComponent, setIsFolderVisible }) => {
           setIsFolderVisible(true); // Ensure the Folder component is visible
         }}
       >
-        <img src="./user-folder.png" height={100} width={100} alt="Profile" />
+        <img src="./user-folder.png" height={60} width={60} alt="Profile" />
         <label className="uppercase font-code font-bold text-sm">Profile</label>
       </div>
     </div>
