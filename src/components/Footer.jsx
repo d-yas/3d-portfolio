@@ -3,15 +3,9 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className="flex justify-center gap-3 items-end py-5">
-      <a
-        href="https://www.instagram.com/denizcanyas/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:scale-150 transform transition duration-300 shadow-lg"
-      >
-        <img src="./insta.png" width={80} alt="Instagram" />
-      </a>
-      
+      <div>
+        
+      </div>
       <a
         href="https://www.linkedin.com/in/denizcan-yas/"
         target="_blank"
@@ -28,6 +22,14 @@ const Footer = () => {
         className="hover:scale-150 transform transition duration-300"
       >
         <img src="./github.png" width={80} alt="GitHub" />
+      </a>
+      <a
+        href="https://www.instagram.com/denizcanyas/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:scale-150 transform transition duration-300 shadow-lg"
+      >
+        <img src="./insta.png" width={80} alt="Instagram" />
       </a>
     </div>
   );
