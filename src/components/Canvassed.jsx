@@ -22,11 +22,11 @@ const Canvassed = () => {
           position: [-2.6, 1.2, 1],
         }}
       >
-        {/* <Perf position="top-left" /> */}
+        <Perf position="top-left" />
         <OrbitControls makeDefault />
         <Float>
+          <ambientLight intensity={8} />
           <Island scale={0.23} position={[0.34, -2.1, 0.5]} />
-          <ambientLight />
         </Float>
         <Center>
           <Html zIndexRange={[2, 0]} position={[0, 1, -0.1]}>

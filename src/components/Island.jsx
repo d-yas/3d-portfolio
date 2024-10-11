@@ -2,15 +2,14 @@ import React from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 
 export function Island(props) {
-  const { nodes } = useGLTF("/island.glb");
-  const bakedTexture = useTexture("realBaked.jpg");
+  const { nodes } = useGLTF("/islandscene.glb");
+  const bakedTexture = useTexture("baked.jpg");
   bakedTexture.flipY = false; // Ensure the texture is not flipped
-  
+
   console.log(bakedTexture); // Debugging: log the texture to check if it's loaded correctly
-  
+
   return (
     <group {...props} dispose={null}>
-      {/* Applying the baked texture to each mesh */}
       <mesh
         castShadow
         receiveShadow
@@ -20,7 +19,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -30,7 +28,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -40,7 +37,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -50,27 +46,15 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["lamp-outer"].geometry}
+        geometry={nodes['lamp-outer'].geometry}
         position={[-1.901, 12.385, -3.14]}
         rotation={[-3.138, 0.131, 3.103]}
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes["lamp-inside"].geometry}
-        position={[-1.9, 12.358, -3.14]}
-        rotation={[-3.138, 0.131, 3.103]}
-      >
-        <meshStandardMaterial map={bakedTexture} />
-      </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -80,7 +64,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -90,7 +73,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -100,17 +82,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.panel.geometry}
-        position={[-2.473, 12.67, -3.878]}
-        rotation={[-0.001, -0.009, 0.038]}
-      >
-        <meshStandardMaterial map={bakedTexture} />
-      </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -120,17 +91,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.window001.geometry}
-        position={[-0.389, 13.182, -4.365]}
-        rotation={[-0.001, -0.009, 0.038]}
-      >
-        <meshStandardMaterial map={bakedTexture} />
-      </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -140,7 +100,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -150,7 +109,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -160,7 +118,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -170,7 +127,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -180,7 +136,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -190,7 +145,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -200,37 +154,33 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["grilled-meat"].geometry}
+        geometry={nodes['grilled-meat'].geometry}
         position={[-1.584, 11.831, -4.579]}
         rotation={[-0.001, -0.009, 0.038]}
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["doner-fire"].geometry}
+        geometry={nodes['doner-fire'].geometry}
         position={[-0.632, 12.103, -4.551]}
         rotation={[1.794, -1.532, 1.795]}
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["doner-station"].geometry}
+        geometry={nodes['doner-station'].geometry}
         position={[-0.677, 12.088, -4.552]}
         rotation={[1.794, -1.532, 1.795]}
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -240,27 +190,15 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["bilboard-fences"].geometry}
+        geometry={nodes['bilboard-fences'].geometry}
         position={[-1.278, 13.841, -3.747]}
         rotation={[-0.001, -0.009, 0.038]}
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Text001.geometry}
-        position={[-0.699, 14.015, -3.603]}
-        rotation={[1.569, 0.038, 0.009]}
-      >
-        <meshStandardMaterial map={bakedTexture} />
-      </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -270,7 +208,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -280,7 +217,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -290,7 +226,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -300,17 +235,15 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["roof-1"].geometry}
+        geometry={nodes['roof-1'].geometry}
         position={[-1.245, 12.855, -3.522]}
         rotation={[1.886, 0.039, 1.566]}
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -320,7 +253,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -330,7 +262,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -340,7 +271,6 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
@@ -350,41 +280,66 @@ export function Island(props) {
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["tree-log"].geometry}
+        geometry={nodes['tree-log'].geometry}
         position={[1.327, 11.372, -3.121]}
         rotation={[0, 0, -0.12]}
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["tree-log001"].geometry}
+        geometry={nodes['tree-log001'].geometry}
         position={[0.794, 11.343, -4.43]}
         rotation={[0, 0, 0.006]}
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes['lamp-inside'].geometry}
+        position={[-1.9, 12.358, -3.14]}
+        rotation={[-3.138, 0.131, 3.103]}
+      >
+        <meshStandardMaterial map={bakedTexture} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.panel.geometry}
+        position={[-2.473, 12.67, -3.878]}
+        rotation={[-0.001, -0.009, 0.038]}
+      >
+        <meshStandardMaterial map={bakedTexture} />
+      </mesh>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.window001.geometry}
+        position={[-0.389, 13.182, -4.365]}
+        rotation={[-0.001, -0.009, 0.038]}
+      >
+        <meshStandardMaterial map={bakedTexture} />
+      </mesh>
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.island.geometry}
-        position={[-0.518, 9.881, -3.358]}
+        position={[0.084, 7.936, -3.339]}
+        rotation={[0, 0, 0.05]}
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
-
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.surface.geometry}
-        position={[-0.5, 11.158, -3.393]}
+        geometry={nodes.ground.geometry}
+        position={[0.084, 7.936, -3.339]}
+        rotation={[0, 0, 0.05]}
       >
         <meshStandardMaterial map={bakedTexture} />
       </mesh>
@@ -392,6 +347,6 @@ export function Island(props) {
   );
 }
 
-useGLTF.preload("/island.glb");
+useGLTF.preload('/islandscene.glb');
 
 export default Island;
