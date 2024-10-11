@@ -1,4 +1,5 @@
 import RagingSea from "./RagingSea";
+import Mac from "./Mac";
 import { Canvas } from "@react-three/fiber";
 import Section from "./Utils/Section";
 import {
@@ -24,10 +25,11 @@ const Canvassed = () => {
       >
         <Perf position="top-left" />
         <OrbitControls makeDefault />
-        <Float>
-          <ambientLight intensity={8} />
+        {/* <Float> */}
+          <ambientLight intensity={4} />
           <Island scale={0.23} position={[0.34, -2.1, 0.5]} />
-        </Float>
+          <Mac />
+        {/* </Float> */}
         <Center>
           <Html zIndexRange={[2, 0]} position={[0, 1, -0.1]}>
             {/* <Hero /> */}
@@ -37,7 +39,7 @@ const Canvassed = () => {
           </Float>
         </Center>
 
-        <Sparkles count={300} scale={3} size={1} speed={0.01} />
+        <Sparkles count={200} scale={3} size={1} speed={0.01} />
       </Canvas>
     </Section>
   );
