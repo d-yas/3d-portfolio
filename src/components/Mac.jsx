@@ -11,7 +11,7 @@ import {
 
 import Intro from './Intro';
 
-const Mac = () => {
+const Mac = ({onClick}) => {
   const computer = useGLTF(
     "https://threejs-journey.com/resources/models/macbook_model.gltf"
   );
@@ -21,9 +21,13 @@ const Mac = () => {
 
       <primitive
         object={computer.scene}
-        scale={0.025}
-        position={[0,0.642,-0.3]}
-        rotation={[0.04, 0, 0.05]}
+        /* scale={0.025} */
+        /* position={[0,0.642,-0.28]}
+        rotation={[0.04, 0, 0.05]} */
+        scale={0.165}
+        position={[0.737,0.76,1.43]}
+        rotation={[0, 0.45, 0]}
+        onClick={onClick}
       >
         <Html
           transform
@@ -33,7 +37,7 @@ const Mac = () => {
           
         >
             <div className="w-[1488px] h-[1000px] border-none rounded-2xl ">
-                <Intro className={`hidden`} />
+                <Intro  />
             </div>
           
         </Html>

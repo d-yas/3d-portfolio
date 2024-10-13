@@ -23,20 +23,22 @@ const Scene = () => {
 
     const { camera } = useThree()
     useEffect(() => {
-        // Set a timeout to delay the camera adjustment
         const timer = setTimeout(() => {
-          const cameraPosition = [0.78, 1.14, 1.67]; // Camera's position
-          const targetPosition = [0, .67, 0]; // Target position to look at
-          
+          const cameraPosition = [0.78, 1.14, 1.67]; 
+          const targetPosition = [0, .67, 0]; 
+
+         
           cameraControlsRef.current?.setLookAt(
-            cameraPosition[0], cameraPosition[1], cameraPosition[2], // x, y, z of the camera position
-            targetPosition[0], targetPosition[1], targetPosition[2], // x, y, z of the target position
+            cameraPosition[0], cameraPosition[1], cameraPosition[2], 
+            targetPosition[0], targetPosition[1], targetPosition[2], 
             true, 
           );
         }, 10); 
 
         return () => clearTimeout(timer);
       }, []);
+    
+
     
 
   return (
@@ -49,7 +51,7 @@ const Scene = () => {
       
 
       <Island scale={0.23} position={[0.34, -2.1, 0.5]} />
-      <Mac />
+      <Mac  />
 
 
       <Float>
