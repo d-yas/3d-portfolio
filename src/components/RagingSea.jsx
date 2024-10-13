@@ -40,20 +40,12 @@ export default function RagingSea() {
   });
   return (
     <>
-      <PresentationControls
-        global 
-        polar={[-0.04, 0.07]} 
-        config={{
-          mass: 1,
-          tension: 400,
-        }} 
-        snap={{ mass: 4, tension: 400 }} 
-      >
+
         <mesh rotation-x={-Math.PI * 0.5} scale={2}>
           <planeGeometry args={[2, 2, 512, 512]} />
           <waterMaterial ref={waterMaterial} />
         </mesh>
-      </PresentationControls>
+      
     </>
   );
 }

@@ -1,45 +1,30 @@
-import RagingSea from "./RagingSea";
-import Mac from "./Mac";
-import { Canvas } from "@react-three/fiber";
+
+import { Canvas,useFrame,useThree } from "@react-three/fiber";
 import Section from "./Utils/Section";
-import {
-  Center,
-  Float,
-  Html,
-  Sparkles,
-  OrbitControls,
-} from "@react-three/drei";
-import { Perf } from "r3f-perf";
-import Island from "./Island";
+import Scene from "./Scene";
+
+
+
+
+
+
 
 const Canvassed = () => {
+  
+  
   return (
-    <Section three className="pt-[4.75rem] lg:pt-[5.25rem]">
+    <Section three >
       <Canvas
         camera={{
           fov: 50,
           near: 0.1,
           far: 200,
-          position: [-2.6, 1.2, 1],
+          position: [-0.58, 3.14, -2.42],
+
         }}
       >
-        <Perf position="top-left" />
-        <OrbitControls makeDefault />
-        {/* <Float> */}
-          <ambientLight intensity={4} />
-          <Island scale={0.23} position={[0.34, -2.1, 0.5]} />
-          <Mac />
-        {/* </Float> */}
-        <Center>
-          <Html zIndexRange={[2, 0]} position={[0, 1, -0.1]}>
-            {/* <Hero /> */}
-          </Html>
-          <Float>
-            <RagingSea />
-          </Float>
-        </Center>
-
-        <Sparkles count={200} scale={3} size={1} speed={0.01} />
+        <color attach='background' args={['#000000']} />
+        {<Scene />}
       </Canvas>
     </Section>
   );

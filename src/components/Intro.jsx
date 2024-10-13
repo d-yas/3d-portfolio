@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import Files from "./Files";
 import Navbar from "./Navbar";
 
-const Intro = () => {
+const Intro = ({className=''}) => {
   
   const [activeComponent, setActiveComponent] = useState("Profile");
 
@@ -12,7 +12,7 @@ const Intro = () => {
   const [isFolderVisible, setIsFolderVisible] = useState(false); // Set to false by default
 
   return (
-    <section className="w-full h-screen top-0 left-0">
+    <section className={`w-full h-screen top-0 left-0 ${className}`}>
       <img
         src="./bg-grad.jpeg"
         alt="Desktop"
