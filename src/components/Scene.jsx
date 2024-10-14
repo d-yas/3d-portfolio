@@ -28,7 +28,7 @@ const Scene = () => {
     const updateSmoothTime = () => {
       setTimeout(() => {
         setSmoothTime(0.1); // Set smoothTime to 0.5 after 2 seconds
-      }, 2100); // 2000 milliseconds = 2 seconds
+      }, 2400); // 2000 milliseconds = 2 seconds
     };
 
     useEffect(() => {
@@ -58,7 +58,7 @@ const Scene = () => {
 
   return (
     <>
-    <CameraControls ref={cameraControlsRef} truckSpeed={0.1} smoothTime={smoothTime} dollyToCursor   enabled={controlsEnabled}  maxPolarAngle={Math.PI/2.3}/>
+    <CameraControls ref={cameraControlsRef} maxDistance={3.6} truckSpeed={0.1} smoothTime={smoothTime} dollyToCursor   enabled={controlsEnabled}  maxPolarAngle={Math.PI/2.3}/>
       <Perf position="bottom-left" />
       
 
