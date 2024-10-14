@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <div className="bg-black">
-        <Header />
+        {/* <Header /> */}
         <Canvassed/>
         {/* <Intro /> */}
       </div>
