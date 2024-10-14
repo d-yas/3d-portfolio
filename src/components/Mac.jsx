@@ -52,6 +52,7 @@ const Mac = ({ onClick, cameraControlsRef,disableCameraControls }) => {
         }
       };
 
+      const isMobile = () => window.innerWidth < 768;
 
     return (
         <>
@@ -65,9 +66,11 @@ const Mac = ({ onClick, cameraControlsRef,disableCameraControls }) => {
                 onClick={handleClick}
                 
             >
-                <Text position={[0.5,4,-1.8]} scale={0.5} fontSize={.4} maxWidth={7} outlineBlur={0.6} >
-                For the best experience,please access from a computer
+               {isMobile() && (
+                <Text position={[0.5, 4, -1.8]} scale={0.5} fontSize={0.4} maxWidth={7} outlineBlur={0.6}>
+                    For the best experience, please access from a desktop
                 </Text>
+            )}
                 <Html
                     transform
                     distanceFactor={0.82}
