@@ -8,6 +8,7 @@ import {
   Html,
   Sparkles,
   OrbitControls,
+  Text3D,
   CameraControls,
 } from "@react-three/drei";
 import { Perf } from "r3f-perf";
@@ -64,7 +65,7 @@ const Scene = () => {
 
       <ambientLight intensity={4} />
       
-
+      
       <Island scale={0.23} position={[0.34, -2.1, 0.5]} />
       <Mac cameraControlsRef={cameraControlsRef} disableCameraControls={disableCameraControls} />
 

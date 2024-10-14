@@ -1,4 +1,5 @@
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
+
 import Section from "./Utils/Section";
 import Scene from "./Scene";
 
@@ -15,6 +16,7 @@ const Canvassed = () => {
       >
         <color attach="background" args={["#000000"]} />
         <Scene />
+        
       </Canvas>
     </Section>
   );

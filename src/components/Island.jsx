@@ -1,15 +1,39 @@
 import React from "react";
-import { useGLTF, useTexture } from "@react-three/drei";
+import { useGLTF, useTexture, Text3D, Text } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 
 export function Island(props) {
   const { nodes } = useGLTF("/islandscene.glb");
   const bakedTexture = useTexture("baked.jpg");
   bakedTexture.flipY = false; // Ensure the texture is not flipped
 
-  console.log(bakedTexture); // Debugging: log the texture to check if it's loaded correctly
-
   return (
     <group {...props} dispose={null}>
+      <Text3D
+        position={[-2.065, 13.686, -3.665]}
+        rotation={[-0.001, -0.009, 0.038]}
+        font={"./font.json"}
+        scale={0.31}
+        letterSpacing={0.0001}
+      >
+        Deniz'S
+      </Text3D>
+      <Text3D
+        position={[-2.617, 13.037, -3.834]}
+        rotation={[-0.001, -0.009, 0.038]}
+        font={"./code-font.json"}
+        size={0.32}
+        scale={0.067}
+        letterSpacing={0.0001}
+        height={0.1}
+      >
+        {`.\n.>>>\n.\n.\n.\n.\n.\n.Data\n Analyst\n\n.Creative\n Developer \n.\n.\n.\n.\n.\n.>>>>>>>\n.`}
+        <meshStandardMaterial color={"purple"} />
+      </Text3D>
+      
+
+    
+
       <mesh
         castShadow
         receiveShadow
@@ -49,7 +73,7 @@ export function Island(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes['lamp-outer'].geometry}
+        geometry={nodes["lamp-outer"].geometry}
         position={[-1.901, 12.385, -3.14]}
         rotation={[-3.138, 0.131, 3.103]}
       >
@@ -157,7 +181,7 @@ export function Island(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes['grilled-meat'].geometry}
+        geometry={nodes["grilled-meat"].geometry}
         position={[-1.584, 11.831, -4.579]}
         rotation={[-0.001, -0.009, 0.038]}
       >
@@ -166,7 +190,7 @@ export function Island(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes['doner-fire'].geometry}
+        geometry={nodes["doner-fire"].geometry}
         position={[-0.632, 12.103, -4.551]}
         rotation={[1.794, -1.532, 1.795]}
       >
@@ -175,7 +199,7 @@ export function Island(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes['doner-station'].geometry}
+        geometry={nodes["doner-station"].geometry}
         position={[-0.677, 12.088, -4.552]}
         rotation={[1.794, -1.532, 1.795]}
       >
@@ -193,7 +217,7 @@ export function Island(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes['bilboard-fences'].geometry}
+        geometry={nodes["bilboard-fences"].geometry}
         position={[-1.278, 13.841, -3.747]}
         rotation={[-0.001, -0.009, 0.038]}
       >
@@ -238,7 +262,7 @@ export function Island(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes['roof-1'].geometry}
+        geometry={nodes["roof-1"].geometry}
         position={[-1.245, 12.855, -3.522]}
         rotation={[1.886, 0.039, 1.566]}
       >
@@ -283,7 +307,7 @@ export function Island(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes['tree-log'].geometry}
+        geometry={nodes["tree-log"].geometry}
         position={[1.327, 11.372, -3.121]}
         rotation={[0, 0, -0.12]}
       >
@@ -292,7 +316,7 @@ export function Island(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes['tree-log001'].geometry}
+        geometry={nodes["tree-log001"].geometry}
         position={[0.794, 11.343, -4.43]}
         rotation={[0, 0, 0.006]}
       >
@@ -301,7 +325,7 @@ export function Island(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes['lamp-inside'].geometry}
+        geometry={nodes["lamp-inside"].geometry}
         position={[-1.9, 12.358, -3.14]}
         rotation={[-3.138, 0.131, 3.103]}
       >
@@ -347,6 +371,6 @@ export function Island(props) {
   );
 }
 
-useGLTF.preload('/islandscene.glb');
+useGLTF.preload("/islandscene.glb");
 
 export default Island;

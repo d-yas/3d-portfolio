@@ -9,7 +9,6 @@ const App = () => {
       <div className="bg-black">
         <Header />
         <Canvassed/>
-        {/* <Intro /> */}
       </div>
     </>
   );

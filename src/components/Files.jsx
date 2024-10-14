@@ -33,6 +33,7 @@ const Files = ({ setActiveComponent, setIsFolderVisible }) => {
         <img src="./user-folder.png" height={60} width={60} alt="Profile" />
         <label className="uppercase font-code font-bold text-sm">Profile</label>
       </div>
+      
     </div>
   );
 };
