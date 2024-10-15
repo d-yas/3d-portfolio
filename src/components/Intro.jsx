@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Folder from "./Folder";
 import Footer from "./Footer";
 import Files from "./Files";
@@ -7,8 +7,21 @@ import { Html } from "@react-three/drei";
 
 const Intro = ({ className = "" }) => {
   const [activeComponent, setActiveComponent] = useState("Profile");
-
   const [isFolderVisible, setIsFolderVisible] = useState(false); // Set to false by default
+
+  // Create the audio object
+  
+  const handleMouseClick = () => {
+    const clickSound = new Audio("./click.mp3");
+    clickSound.play();
+  };
+
+  useEffect(() => {
+    window.addEventListener("mousedown", handleMouseClick);
+    return () => {
+      window.removeEventListener("mousedown", handleMouseClick);
+    };
+  }, []);
 
   return (
     <Html

@@ -21,6 +21,7 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
   const isMobile = () => window.innerWidth < 768;
   const [clicked, setClicked] = useState(false);
   const [showIntro, setShowIntro] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const textRef = useRef();
 
   /* Animation */
@@ -35,7 +36,9 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
     const isMobile = window.innerWidth < 768;
     if (isMobile) {
       setShowIntro(!showIntro);
+      setIsVisible(!isVisible);
     } else {
+      setIsVisible(!isVisible);
       setShowIntro(!showIntro);
       setClicked(!clicked);
       disableCameraControls();
@@ -73,10 +76,10 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
         background
       />
       <mesh
-        position={[0.01, 0.68, -0.3]} // Adjust the position to where you want the cube to be
-        scale={0.22} // Adjust the size as needed
+        position={[0.01, 0.68, -0.3]} 
+        scale={0.22} 
         onClick={handleClick}
-        visible={false} // Makes the cube invisible but still interactive
+        visible={false} 
       >
         <boxGeometry />
         <meshStandardMaterial color="red" />
@@ -92,7 +95,7 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
         height={0.2}
         ref={textRef}
         onClick={handleClick}
-        
+        visible={isVisible}
       >
         {` CLICK\n\n\n\n\n\n   |\n\n   |\n   v`}
        
@@ -111,12 +114,12 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
         {isMobile() && (
           <Text
             position={[4.5, 3, -1.8]}
-            scale={0.5}
+            scale={0.7}
             fontSize={0.45}
-            maxWidth={7}
+            maxWidth={6}
             outlineBlur={0.6}
           >
-            For the best experience, please access from a desktop
+            For the best experience, please try from a Desktop.
           </Text>
         )}
         {showIntro && <Intro />}
