@@ -18,6 +18,7 @@ const App = () => {
   return (
     <div className="bg-black">
       <Suspense fallback={<Loading />}>
+      
         {isLoaded && <Header />}
         <Canvassed />
       </Suspense>
