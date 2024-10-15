@@ -91,6 +91,7 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
         lineHeight={0.18}
         height={0.2}
         ref={textRef}
+        onClick={handleClick}
         
       >
         {` CLICK\n\n\n\n\n\n   |\n\n   |\n   v`}
