@@ -55,7 +55,7 @@ const Scene = () => {
     <>
       <CameraControls
         ref={cameraControlsRef}
-        maxDistance={3.6}
+        maxDistance={2.6}
         truckSpeed={0.1}
         smoothTime={smoothTime}
         dollyToCursor
@@ -64,14 +64,14 @@ const Scene = () => {
       />
       <Perf position="bottom-left" />
 
-      <ambientLight intensity={4} />
-
+      <ambientLight intensity={8} />
+      
       <Island scale={0.23} position={[0.34, -2.1, 0.5]} />
       <Mac
         cameraControlsRef={cameraControlsRef}
         disableCameraControls={disableCameraControls}
       />
-      {/* <SpinLights /> */}
+      
       
       <Float>
         <RagingSea />

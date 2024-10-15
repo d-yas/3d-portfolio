@@ -27,11 +27,9 @@ export function Island(props) {
         letterSpacing={0.0001}
         height={0.1}
       >
-        {`.\n.>>>\n.\n.\n.\n.\n.\n.Data\n Analyst\n\n.Creative\n Developer \n.\n.\n.\n.\n.\n.>>>>>>>\n.`}
+        {`.\n.>>>\n.\n.\n.\n.\n.\n.Data\n Analyst\n\n.Creative\n Developer \n.\n.\n.\n.\n\n.>>>>>>>\n.`}
         <meshStandardMaterial color={"purple"} />
       </Text3D>
-      
-
     
 
       <mesh

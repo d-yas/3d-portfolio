@@ -1,11 +1,9 @@
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import Sun from "./Sun";
 import Section from "./Utils/Section";
 import Scene from "./Scene";
 
 const Canvassed = () => {
-  
   return (
     <Section three>
       <Canvas
@@ -18,8 +16,7 @@ const Canvassed = () => {
       >
         <color attach="background" args={["#000000"]} />
         <Scene />
-       
-     
+        
       </Canvas>
     </Section>
   );
