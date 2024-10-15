@@ -2,6 +2,8 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import Sun from "./Sun";
 import Section from "./Utils/Section";
 import Scene from "./Scene";
+import { Bloom, EffectComposer } from "@react-three/postprocessing";
+
 
 const Canvassed = () => {
   return (

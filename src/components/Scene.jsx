@@ -64,7 +64,7 @@ const Scene = () => {
       />
       <Perf position="bottom-left" />
 
-      <ambientLight intensity={8} />
+      <ambientLight intensity={7.5} />
       
       <Island scale={0.23} position={[0.34, -2.1, 0.5]} />
       <Mac
