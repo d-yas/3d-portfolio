@@ -73,8 +73,8 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
         background
       />
       <mesh
-        position={[0, 0.68, -0.3]} // Adjust the position to where you want the cube to be
-        scale={0.14} // Adjust the size as needed
+        position={[0.01, 0.68, -0.3]} // Adjust the position to where you want the cube to be
+        scale={0.22} // Adjust the size as needed
         onClick={handleClick}
         visible={false} // Makes the cube invisible but still interactive
       >
@@ -106,6 +106,7 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
         position={position}
         rotation={rotation}
         onClick={handleClick}
+        
       >
         {isMobile() && (
           <Text
@@ -118,16 +119,7 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
             For the best experience, please access from a desktop
           </Text>
         )}
-        <Html
-          transform
-          distanceFactor={0.83}
-          position={[0.004, 1.48, -1.4]}
-          rotation-x={-0.256}
-        >
-          <div className="w-[1488px] h-[1000px] border-none rounded-2xl ">
-            {showIntro && <Intro />}
-          </div>
-        </Html>
+        {showIntro && <Intro />}
       </a.primitive>
 
       <ContactShadows position-y={-1.4} opacity={0.4} scale={5} blur={2.4} />

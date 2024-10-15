@@ -1,13 +1,13 @@
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import Sun from "./Sun";
+import { Canvas} from "@react-three/fiber";
 import Section from "./Utils/Section";
 import Scene from "./Scene";
-import { Bloom, EffectComposer } from "@react-three/postprocessing";
+
 
 
 const Canvassed = () => {
-  return (
+  return (<>
     <Section three>
+
       <Canvas
         camera={{
           fov: 50,
@@ -17,10 +17,11 @@ const Canvassed = () => {
         }}
       >
         <color attach="background" args={["#000000"]} />
-        <Scene />
         
+        <Scene />
       </Canvas>
     </Section>
+  </>
   );
 };
 

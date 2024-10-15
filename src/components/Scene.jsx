@@ -1,17 +1,12 @@
 import RagingSea from "./RagingSea";
 import Mac from "./Mac";
-
 import { useFrame, useThree } from "@react-three/fiber";
-
-import {
-  Float,
-  Sparkles,
-  CameraControls,
-} from "@react-three/drei";
+import Header from "./Header";
+import { Float, Sparkles, CameraControls, Html } from "@react-three/drei";
 import { Perf } from "r3f-perf";
 import Island from "./Island";
 import { useEffect, useRef, useState } from "react";
-import SpinLights from './SpinLights'
+import SpinLights from "./SpinLights";
 
 const Scene = () => {
   const cameraControlsRef = useRef();
@@ -65,14 +60,13 @@ const Scene = () => {
       <Perf position="bottom-left" />
 
       <ambientLight intensity={7.5} />
-      
+
       <Island scale={0.23} position={[0.34, -2.1, 0.5]} />
       <Mac
         cameraControlsRef={cameraControlsRef}
         disableCameraControls={disableCameraControls}
       />
-      
-      
+
       <Float>
         <RagingSea />
       </Float>
