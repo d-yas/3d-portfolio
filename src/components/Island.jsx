@@ -1,6 +1,6 @@
 import React from "react";
-import { useGLTF, useTexture, Text3D, Text } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
+import { useGLTF, useTexture, Text3D } from "@react-three/drei";
+
 
 export function Island(props) {
   const { nodes } = useGLTF("/islandscene.glb");

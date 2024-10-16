@@ -1,5 +1,4 @@
 import {
-  Html,
   ContactShadows,
   Environment,
   useGLTF,
@@ -7,7 +6,7 @@ import {
   Text3D,
   Outlines,
 } from "@react-three/drei";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { a, useSpring } from "@react-spring/three"; // Importing animated components from react-spring
 
 import Intro from "./Intro";

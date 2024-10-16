@@ -4,6 +4,7 @@ import Scene from "./Scene";
 
 
 
+
 const Canvassed = () => {
   return (<>
     <Section three>
@@ -17,7 +18,6 @@ const Canvassed = () => {
         }}
       >
         <color attach="background" args={["#000000"]} />
-        
         <Scene />
       </Canvas>
     </Section>

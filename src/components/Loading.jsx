@@ -1,23 +1,4 @@
-import React, { useEffect, useState } from 'react';
-
 const Loading = () => {
-/*   const fullText = "CRREATING DIGITAL EXPERIENCE."; // Corrected the text
-  const [displayedText, setDisplayedText] = useState('');
-
-  useEffect(() => {
-    let index = 0;
-
-    const interval = setInterval(() => {
-      if (index < fullText.length-1) {
-        setDisplayedText((prev) => prev + fullText[index]);
-        index += 1;
-      } else {
-        clearInterval(interval); // Clear the interval when done
-      }
-    }, 40); // Adjust the timing as needed
-
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, [fullText]); */
 
   return (
     <div className="flex items-center justify-center h-screen bg-black">
