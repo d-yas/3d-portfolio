@@ -72,7 +72,7 @@ const Scene = () => {
       </Float>
 
       <Sparkles
-        count={5000}
+        count={1200}
         position={[0, 1, 0]}
         scale={4}
         size={0.6}
