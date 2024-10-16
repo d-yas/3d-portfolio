@@ -72,8 +72,9 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
   return (
     <>
       <Environment
-        files={"./5.jpg"}
-        background
+        /* files={"./5.jpg"}
+        background */
+        preset="city"
       />
       <mesh
         position={[0.01, 0.68, -0.3]}

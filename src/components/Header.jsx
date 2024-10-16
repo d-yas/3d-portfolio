@@ -7,7 +7,7 @@ const Header = () => {
   useEffect(() => {
     ambianceSoundRef.current = new Audio("./ambiance.mp3");
     ambianceSoundRef.current.loop = true;
-    ambianceSoundRef.current.volume = 0.1;
+    ambianceSoundRef.current.volume = 0.03;
 
     const startAudio = () => {
       ambianceSoundRef.current.play();

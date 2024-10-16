@@ -2,7 +2,7 @@ import RagingSea from "./RagingSea";
 import Mac from "./Mac";
 import { useThree } from "@react-three/fiber";
 
-import { Float, Sparkles, CameraControls, Html } from "@react-three/drei";
+import { Float, Sparkles, CameraControls, Html, Stars } from "@react-three/drei";
 import { Perf } from "r3f-perf";
 import Island from "./Island";
 import { useEffect, useRef, useState } from "react";
@@ -72,12 +72,13 @@ const Scene = () => {
       </Float>
 
       <Sparkles
-        count={600}
-        position={[0, 1, 1]}
+        count={5000}
+        position={[0, 1, 0]}
         scale={4}
-        size={0.5}
+        size={0.6}
         speed={0.09}
       />
+      
     </>
   );
 };
