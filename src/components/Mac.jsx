@@ -72,7 +72,6 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
   return (
     <>
       <Environment
-        ground={{ height: 1, radius: 26, scale: 10 }}
         files={"./5.jpg"}
         background
       />
