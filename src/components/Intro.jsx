@@ -31,17 +31,17 @@ const Intro = ({ className = "" }) => {
       position={[0.006, 1.5, -1.42]}
       rotation-x={-0.256}
     >
-      <div className="w-[89rem] h-[62.5rem] border-none rounded-2xl">
+      <div className="w-[89rem] h-[60.5rem] border-none rounded-2xl">
 
         <section className={`w-full h-screen top-0 left-0 ${className}`}>
           <img
             src="./bg-grad.jpeg"
             alt="Desktop"
-            className="w-full h-screen fixed pointer-events-none"
+            className="w-full fixed pointer-events-none"
           />
           <Navbar />
 
-          <div className="absolute w-full h-screen flex flex-col justify-between">
+          <div className="absolute w-full h-[95%] flex flex-col justify-between">
             <Files
               setActiveComponent={setActiveComponent}
               setIsFolderVisible={setIsFolderVisible}
