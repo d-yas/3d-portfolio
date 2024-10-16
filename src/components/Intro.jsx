@@ -27,11 +27,11 @@ const Intro = ({ className = "" }) => {
   return (
     <Html
       transform
-      distanceFactor={0.83}
-      position={[0.004, 1.44, -1.42]}
+      distanceFactor={0.86}
+      position={[0.006, 1.5, -1.42]}
       rotation-x={-0.256}
     >
-      <div className="w-[93rem] h-[62.5rem] border-none rounded-2xl">
+      <div className="w-[89rem] h-[62.5rem] border-none rounded-2xl">
 
         <section className={`w-full h-screen top-0 left-0 ${className}`}>
           <img

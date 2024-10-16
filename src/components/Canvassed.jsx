@@ -8,7 +8,6 @@ import Scene from "./Scene";
 const Canvassed = () => {
   return (<>
     <Section three>
-
       <Canvas
         camera={{
           fov: 50,
