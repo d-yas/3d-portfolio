@@ -104,4 +104,13 @@ export const webProjects = [
     category: "Web design • Html • Css • UI • UX"
   },
 
+  {
+    id: 3,
+    title: "Portfolio Project",
+    url: "https://www.denizcanyas.com/",
+    image: "./portfolio.png",
+    description: "Created a visually engaging portfolio using Three.js, React, and R3F, featuring custom 3D models built in Blender.",
+    category: "Three.js • React • R3F • Blender "
+  },
+
 ];
