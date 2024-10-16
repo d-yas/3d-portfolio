@@ -19,7 +19,7 @@ const Navbar = () => {
   const formattedDate = currentDate.toLocaleDateString();
   const formattedTime = currentDate.toLocaleTimeString();
   return (
-    <div className="fixed top-0 left-0 h-8 w-full flex flex-row bg-black pointer-events-none">
+    <div className="fixed top-0 left-0 h-8 w-full flex flex-row bg-black pointer-events-none rounded-t-2xl">
       <div className={`w-1/2 flex items-center`}>
         <img
           src="./logo.png"

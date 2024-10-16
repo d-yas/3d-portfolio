@@ -37,11 +37,11 @@ const Intro = ({ className = "" }) => {
           <img
             src="./bg-grad.jpeg"
             alt="Desktop"
-            className="w-full fixed pointer-events-none"
+            className="w-full h-[97%] fixed pointer-events-none rounded-3xl"
           />
           <Navbar />
 
-          <div className="absolute w-full h-[95%] flex flex-col justify-between">
+          <div className="absolute w-full h-[95%] flex flex-col justify-between ">
             <Files
               setActiveComponent={setActiveComponent}
               setIsFolderVisible={setIsFolderVisible}

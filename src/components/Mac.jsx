@@ -21,7 +21,7 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
   const isMobile = () => window.innerWidth < 768;
   const [clicked, setClicked] = useState(false);
   const [showIntro, setShowIntro] = useState(false);
-  const [showImg, setShowImg] = useState(false);
+
   const [isVisible, setIsVisible] = useState(true);
   const textRef = useRef();
 
@@ -37,7 +37,7 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
     const isMobile = window.innerWidth < 768;
     if (isMobile) {
       
-      setShowImg(!showImg);
+      
       setIsVisible(!isVisible);
     } else {
       setIsVisible(!isVisible);
@@ -85,7 +85,7 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
         <boxGeometry />
         <meshStandardMaterial color="red" />
       </mesh>
-      <Text3D
+      {!isMobile() && <Text3D
         position={[-0.07, 0.73, -0.28]}
         rotation={[0, 0.3, 0]}
         font={"./code-font.json"}
@@ -98,11 +98,12 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
         onClick={handleClick}
         visible={isVisible}
       >
-        {` CLICK\n\n\n\n\n\n   |\n\n   |\n   v`}
+        
+         {` CLICK\n\n\n\n\n\n   |\n\n   |\n   v`} 
 
-        <meshBasicMaterial color={""} />
+        <meshBasicMaterial />
         <Outlines thickness={2} color="black" />
-      </Text3D>
+      </Text3D>}
 
       <a.primitive
         object={computer.scene}
@@ -113,8 +114,8 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
       >
         {isMobile() && (
           <Text
-            position={[4.5, 3, -1.8]}
-            scale={0.7}
+            position={[0.6, 3.5, -1.8]}
+            scale={0.9}
             fontSize={0.45}
             maxWidth={6}
             outlineBlur={0.6}
