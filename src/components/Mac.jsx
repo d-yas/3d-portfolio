@@ -5,6 +5,7 @@ import {
   Text,
   Text3D,
   Outlines,
+  Html
 } from "@react-three/drei";
 import { useRef, useState } from "react";
 import { a, useSpring } from "@react-spring/three"; // Importing animated components from react-spring
@@ -20,6 +21,7 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
   const isMobile = () => window.innerWidth < 768;
   const [clicked, setClicked] = useState(false);
   const [showIntro, setShowIntro] = useState(false);
+  const [showImg, setShowImg] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const textRef = useRef();
 
@@ -34,7 +36,8 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
   const handleClick = () => {
     const isMobile = window.innerWidth < 768;
     if (isMobile) {
-      setShowIntro(!showIntro);
+      
+      setShowImg(!showImg);
       setIsVisible(!isVisible);
     } else {
       setIsVisible(!isVisible);
@@ -61,12 +64,11 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
 
   useFrame((state, dt) => {
     if (textRef.current) {
-      textRef.current.position.y += Math.sin(state.clock.elapsedTime * 2) * 0.0001;
-      
+      textRef.current.position.y +=
+        Math.sin(state.clock.elapsedTime * 2) * 0.0001;
     }
   });
-  
-  
+
   return (
     <>
       <Environment
@@ -75,17 +77,17 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
         background
       />
       <mesh
-        position={[0.01, 0.68, -0.3]} 
-        scale={0.22} 
+        position={[0.01, 0.68, -0.3]}
+        scale={0.22}
         onClick={handleClick}
-        visible={false} 
+        visible={false}
       >
         <boxGeometry />
         <meshStandardMaterial color="red" />
       </mesh>
       <Text3D
         position={[-0.07, 0.73, -0.28]}
-        rotation={[0,0.3,0]}
+        rotation={[0, 0.3, 0]}
         font={"./code-font.json"}
         size={0.62}
         scale={0.022}
@@ -97,7 +99,7 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
         visible={isVisible}
       >
         {` CLICK\n\n\n\n\n\n   |\n\n   |\n   v`}
-       
+
         <meshBasicMaterial color={""} />
         <Outlines thickness={2} color="black" />
       </Text3D>
@@ -108,7 +110,6 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
         position={position}
         rotation={rotation}
         onClick={handleClick}
-        
       >
         {isMobile() && (
           <Text
@@ -118,10 +119,18 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
             maxWidth={6}
             outlineBlur={0.6}
           >
-            For the best experience, please try from a Desktop.
+            For the laptop content, please try from a Desktop.
           </Text>
         )}
         {showIntro && <Intro />}
+        {showImg && <Html
+          transform
+          distanceFactor={2.8}
+          position={[0.004, 1.51, -1.4]}
+          rotation-x={-0.256}
+        >
+          <img src="./screen.png" alt="" />
+        </Html>}
       </a.primitive>
 
       <ContactShadows position-y={-1.4} opacity={0.4} scale={5} blur={2.4} />
