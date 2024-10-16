@@ -13,6 +13,7 @@ const Intro = ({ className = "" }) => {
   
   const handleMouseClick = () => {
     const clickSound = new Audio("./click.mp3");
+    clickSound.volume = 0.1;
     clickSound.play();
   };
 
