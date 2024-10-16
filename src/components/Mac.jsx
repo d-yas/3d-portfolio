@@ -123,14 +123,7 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
           </Text>
         )}
         {showIntro && <Intro />}
-        {showImg && <Html
-          transform
-          distanceFactor={2.8}
-          position={[0.004, 1.51, -1.4]}
-          rotation-x={-0.256}
-        >
-          <img src="./screen.png" alt="" />
-        </Html>}
+        
       </a.primitive>
 
       <ContactShadows position-y={-1.4} opacity={0.4} scale={5} blur={2.4} />

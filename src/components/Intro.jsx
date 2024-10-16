@@ -28,10 +28,11 @@ const Intro = ({ className = "" }) => {
     <Html
       transform
       distanceFactor={0.83}
-      position={[0.004, 1.48, -1.4]}
+      position={[0.004, 1.44, -1.42]}
       rotation-x={-0.256}
     >
-      <div className="w-[1488px] h-[1000px] border-none rounded-2xl ">
+      <div className="w-[93rem] h-[62.5rem] border-none rounded-2xl">
+
         <section className={`w-full h-screen top-0 left-0 ${className}`}>
           <img
             src="./bg-grad.jpeg"
