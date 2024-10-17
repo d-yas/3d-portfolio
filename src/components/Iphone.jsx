@@ -14,11 +14,11 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
 
   const springProps = useSpring({
     scale: isClicked ? [0.26, 0.26, 0.26] : [0.012, 0.012, 0.012],
-    position: isClicked ? [0.327, 0.36, 0.8] : [0.14, 0.66, -0.3],
+    position: isClicked ? [0.327, 0.32, 0.8] : [0.14, 0.66, -0.3],
     rotation: isClicked
       ? [-0.19, 25 * (Math.PI / 180), 0.075]
       : [-Math.PI / 2, 0, -0.3],
-    config: { tension: 300, friction: 20 },
+    config: { tension: 120, friction: 20 },
   });
   
 /* stop propaganiation on phone and canvas wrpaaer */
@@ -55,12 +55,18 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
     <>
       <animated.group {...props} {...springProps} dispose={null}>
         <group position={[0, 1.563, 0]}>
+          
+          <mesh>
+              <boxGeometry/>
+              <meshBasicMaterial color={"orange"}/>
+          </mesh>
+          
           <Text3D
             position={[-0.58, 2.8, -4]}
             rotation={[0.3, 0, 0]}
             font={"./code-font.json"}
             size={0.4}
-            scale={0.5}
+            scale={0.7}
             letterSpacing={0.01}
             lineHeight={0.18}
             height={0.2}
