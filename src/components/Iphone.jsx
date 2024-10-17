@@ -20,11 +20,7 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
       : [-Math.PI / 2, 0, -0.3],
     config: { tension: 300, friction: 20 },
   });
-  const { position, scale } = useSpring({
-    position: active ? [-0.15, 1.82, -0.3] : [0.2, 0.7, -0.3],
-    scale: active ? 0.66 : 0.16,
-    config: { tension: 300, friction: 20 },
-  });
+  
 /* stop propaganiation on phone and canvas wrpaaer */
   const handleClick = () => {
     setActive(!active);
@@ -68,7 +64,10 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
             letterSpacing={0.01}
             lineHeight={0.18}
             height={0.2}
-            onClick={handleClick}
+            onClick={(event) => {
+              event.stopPropagation(); 
+              handleClick(); 
+            }}
             visible={isVisible}
           >
             {` EXIT`}
@@ -196,13 +195,13 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
         {isVisible && <IntroPhone />}
       </animated.group>
       <animated.mesh
-        position={position}
-        scale={scale}
+        position={[0.17, 0.7, -0.3]}
+        scale={0.16}
         onClick={(event) => {
           event.stopPropagation(); 
           handleClick(); 
         }}
-        visible={false}
+        visible={true}
       >
         <boxGeometry />
         <meshBasicMaterial />
@@ -216,7 +215,6 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
         letterSpacing={0.01}
         lineHeight={0.18}
         height={0.03}
-        onClick={handleClick}
         ref={textRef}
       >
         

@@ -9,6 +9,7 @@ const Canvassed = () => {
       <Section three>
         <CanvasWrapper>
           <Canvas
+          dpr={[1,2]}
             camera={{
               fov: 50,
               near: 0.1,

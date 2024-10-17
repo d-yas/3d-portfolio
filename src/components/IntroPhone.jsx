@@ -14,11 +14,11 @@ const IntroPhone = () => {
     <Html
         transform
         distanceFactor={0.82}
-        position={[0.151, 1.34,0.06 ]}
+        position={[0.16, 1.32,0.08 ]}
         
       >
     <div className="w-[44rem] h-[98rem] border-none rounded-2xl">
-      <section className={`w-full h-screen top-0 left-0 `}>
+      
         <img
           src="./bg-grad.jpeg"
           alt="Desktop"
@@ -32,7 +32,7 @@ const IntroPhone = () => {
           {selectedApp === "data" && <WebPhone />}
           <FooterPhone />
         </div>
-      </section>
+      
     </div>
     </Html>
   );
