@@ -181,8 +181,14 @@ export function Iphone(props) {
           position={[-0.658, 0.208, -0.002]}
         />
       </group>
-
+      <Html
+        transform
+        distanceFactor={0.86}
+        position={[0.165, 1.184,0 ]}
+        
+      >
       <IntroPhone />
+      </Html>
     </group>
   );
 }
