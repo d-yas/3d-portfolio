@@ -30,7 +30,7 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
     scale: clicked ? 0.165 : 0.025,
     position: clicked ? [0.737, 0.8, 1.43] : [0, 0.642, -0.28],
     rotation: clicked ? [0, 0.45, 0] : [0.04, 0, 0.05],
-    config: { mass: 1, tension: 30, friction: 11 },
+    config: { tension: 300, friction: 50 },
   });
 
   const handleClick = () => {

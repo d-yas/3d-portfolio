@@ -18,14 +18,14 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
     rotation: isClicked
       ? [-0.19, 25 * (Math.PI / 180), 0.075]
       : [-Math.PI / 2, 0, -0.3],
-    config: { mass: 1, tension: 30, friction: 11 },
+    config: { tension: 300, friction: 20 },
   });
   const { position, scale } = useSpring({
     position: active ? [-0.15, 1.82, -0.3] : [0.2, 0.7, -0.3],
     scale: active ? 0.66 : 0.16,
-    config: { mass: 1, tension: 170, friction: 26 },
+    config: { tension: 300, friction: 20 },
   });
-
+/* stop propaganiation on phone and canvas wrpaaer */
   const handleClick = () => {
     setActive(!active);
     setIsVisible(!isVisible);

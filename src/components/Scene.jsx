@@ -19,7 +19,7 @@ const Scene = () => {
 
   const updateSmoothTime = () => {
     setTimeout(() => {
-      setSmoothTime(0.1); // Set smoothTime to 0.5 after 2 seconds
+      setSmoothTime(0.05); // Set smoothTime to 0.5 after 2 seconds
     }, 2400); // 2000 milliseconds = 2 seconds
   };
 
@@ -46,7 +46,7 @@ const Scene = () => {
   const disableCameraControls = () => {
     setTimeout(() => {
       setControlsEnabled(!controlsEnabled);
-    }, 400);
+    }, 150);
   };
 
 
