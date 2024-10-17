@@ -60,7 +60,7 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
       <animated.group {...props} {...springProps} dispose={null}>
         <group position={[0, 1.563, 0]}>
           <Text3D
-            position={[-0.7, 2.8, -4]}
+            position={[-0.58, 2.8, -4]}
             rotation={[0.3, 0, 0]}
             font={"./code-font.json"}
             size={0.4}

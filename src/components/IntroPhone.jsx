@@ -13,8 +13,8 @@ const IntroPhone = () => {
   return (
     <Html
         transform
-        distanceFactor={0.86}
-        position={[0.165, 1.255,0.06 ]}
+        distanceFactor={0.82}
+        position={[0.151, 1.34,0.06 ]}
         
       >
     <div className="w-[44rem] h-[98rem] border-none rounded-2xl">
@@ -22,7 +22,7 @@ const IntroPhone = () => {
         <img
           src="./bg-grad.jpeg"
           alt="Desktop"
-          className="w-full h-[95%] fixed pointer-events-none rounded-[5rem]"
+          className="w-full h-[99.5%] fixed pointer-events-none rounded-[5rem]"
         />
         <div className="flex flex-col items-center absolute inset-0 text-7xl">
           <HeaderPhone />
