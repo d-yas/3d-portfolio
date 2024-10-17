@@ -7,6 +7,8 @@ import { Perf } from "r3f-perf";
 import Iphone from './Iphone';
 import Island from "./Island";
 import { useEffect, useRef, useState } from "react";
+import { useControls } from "leva";
+
 
 
 const Scene = () => {
@@ -47,6 +49,9 @@ const Scene = () => {
     }, 400);
   };
 
+
+
+
   return (
     <>
       <CameraControls
@@ -68,14 +73,8 @@ const Scene = () => {
         disableCameraControls={disableCameraControls}
       />
       {/* Orjinal konum */}
-      {/* <Iphone scale={0.012} position={[0.14,0.66,-0.3]} rotation={[-Math.PI/2,0,-0.3]} /> */}
       
-     
-
-      <Iphone scale={0.24} position={[0.33, 0.5, 0.8]} rotation={[-1 * (Math.PI / 180), 25 * (Math.PI / 180), 1 * (Math.PI / 180)]} />
-{/* LEva debug bakıcam. */}
-      
-      
+      <Iphone cameraControlsRef={cameraControlsRef} disableCameraControls={disableCameraControls} />    
       
       <Float>
         <RagingSea />

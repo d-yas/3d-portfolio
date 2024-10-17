@@ -2,6 +2,7 @@ import React, { Suspense, useState, useEffect } from "react";
 import Loading from "./components/Loading";
 import Header from './components/Header';
 import Canvassed from './components/Canvassed';
+import IntroPhone from './components/IntroPhone';
 
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -22,6 +23,7 @@ const App = () => {
         {isLoaded && <Header/>}
         <Canvassed />
       </Suspense>
+      
     </div>
   );
 };
