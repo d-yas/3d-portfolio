@@ -77,9 +77,12 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
         preset="city"
       />
       <mesh
-        position={[0.01, 0.68, -0.3]}
-        scale={0.22}
-        onClick={handleClick}
+        position={[-0.01, 0.69, -0.3]}
+        scale={0.15}
+        onClick={(event) => {
+          event.stopPropagation(); 
+          handleClick(); 
+        }}
         visible={false}
       >
         <boxGeometry />

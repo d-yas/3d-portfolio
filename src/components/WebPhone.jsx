@@ -20,7 +20,7 @@ const WebPhone = () => {
           <img
             src={selectedProject.image}
             className="object-cover w-full h-full rounded-tl-3xl  rounded-br-3xl shadow-sm"
-            alt={selectedProject.title}
+            
           />
         </div>
         <div className="flex flex-col">

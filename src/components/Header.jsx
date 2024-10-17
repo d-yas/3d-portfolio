@@ -33,12 +33,12 @@ const Header = () => {
 
   return (
     <>
-      <div className="fixed top-0 w-full z-50 flex items-center justify-between :mx-auto pt-5">
+      <div className="fixed top-0  z-30  flex items-center pt-5">
         <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-          <span className="font-mont font-bold text-[1.85rem] block">Denizcan.</span>
-          
+          <span className="font-mont font-bold text-[1.27rem] block">Denizcan.</span>
         </div>
-        <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+      </div>
+      <div className="flex items-center mt-9 z-50 right-10 absolute">
           <span
             className={`font-mont font-bold text-[1.85rem] block cursor-pointer ${
               isMuted ? "opacity-50" : ""
@@ -48,7 +48,6 @@ const Header = () => {
             <img src="./volume.png" height={4} width={32} alt="Volume" />
           </span>
         </div>
-      </div>
     </>
   );
 };
