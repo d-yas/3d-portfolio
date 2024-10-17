@@ -2,8 +2,9 @@ import RagingSea from "./RagingSea";
 import Mac from "./Mac";
 import { useThree } from "@react-three/fiber";
 
-import { Float, Sparkles, CameraControls, Html, Stars } from "@react-three/drei";
+import { Float, Sparkles, CameraControls, Html,Center } from "@react-three/drei";
 import { Perf } from "r3f-perf";
+import Iphone from './Iphone';
 import Island from "./Island";
 import { useEffect, useRef, useState } from "react";
 
@@ -66,7 +67,16 @@ const Scene = () => {
         cameraControlsRef={cameraControlsRef}
         disableCameraControls={disableCameraControls}
       />
-  
+      {/* Orjinal konum */}
+      {/* <Iphone scale={0.012} position={[0.14,0.66,-0.3]} rotation={[-Math.PI/2,0,-0.3]} /> */}
+      
+     
+
+      <Iphone scale={0.24} position={[0.33, 0.5, 0.8]} rotation={[-1 * (Math.PI / 180), 25 * (Math.PI / 180), 1 * (Math.PI / 180)]} />
+{/* LEva debug bakıcam. */}
+      
+      
+      
       <Float>
         <RagingSea />
       </Float>
