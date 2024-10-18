@@ -20,7 +20,7 @@ const IntroPhone = () => {
   }, []);
 
   // Set the position based on whether the device is iOS or not
-  const htmlPosition = useMemo(() => (isIOS ? [0.09, 1.23, 0.08] : [0.16, 1.25, 0.08]), [isIOS]);
+  const htmlPosition = useMemo(() => (isIOS ? [0.095, 1.23, 0.08] : [0.16, 1.25, 0.08]), [isIOS]);
 
   return (
     <Html

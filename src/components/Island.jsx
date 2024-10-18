@@ -20,6 +20,7 @@ export function Island(props) {
       >
         Deniz'S
       </Text3D>
+      
       <Text3D
         position={[-2.617, 13.037, -3.834]}
         rotation={[-0.001, -0.009, 0.038]}

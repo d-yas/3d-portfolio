@@ -45,7 +45,7 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setTextVisible(true); 
-    }, 2600);
+    }, 3200);
 
   
     return () => clearTimeout(timer);

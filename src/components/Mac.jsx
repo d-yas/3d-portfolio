@@ -29,7 +29,7 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowText3D(true); // Set to true after 2 seconds
-    }, 2600);
+    }, 3200);
 
     return () => clearTimeout(timer); // Clean up the timer on component unmount
   }, []);

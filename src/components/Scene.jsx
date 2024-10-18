@@ -2,12 +2,12 @@ import RagingSea from "./RagingSea";
 import Mac from "./Mac";
 import { useThree } from "@react-three/fiber";
 
-import { Float, Sparkles, CameraControls, Html,Center } from "@react-three/drei";
-import { Perf } from "r3f-perf";
+import { Float, Sparkles, CameraControls, Text } from "@react-three/drei";
+
 import Iphone from './Iphone';
 import Island from "./Island";
 import { useEffect, useRef, useState } from "react";
-import { useControls } from "leva";
+
 
 
 
@@ -19,8 +19,8 @@ const Scene = () => {
 
   const updateSmoothTime = () => {
     setTimeout(() => {
-      setSmoothTime(0.05); // Set smoothTime to 0.5 after 2 seconds
-    }, 2600); // 2000 milliseconds = 2 seconds
+      setSmoothTime(0.05); 
+    }, 2600); 
   };
 
   useEffect(() => {
@@ -79,9 +79,9 @@ const Scene = () => {
       <Float>
         <RagingSea />
       </Float>
-
+      
       <Sparkles
-        count={1200}
+        count={900}
         position={[0, 1, 0]}
         scale={4}
         size={0.6}
