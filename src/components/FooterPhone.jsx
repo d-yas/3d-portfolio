@@ -2,7 +2,7 @@ import React from 'react'
 
 const FooterPhone = () => {
   return (
-    <div className="h-[12rem] w-11/12 p-9 absolute mt-[84rem] backdrop-blur-[140px] rounded-[6rem]">
+    <div className="h-[12rem] w-11/12 p-9 absolute mt-[76rem] backdrop-blur-[140px] rounded-[6rem]">
             <div className="flex justify-center gap-3 items-end ">
               <a
                 href="mailto:denizcanyas@gmail.com"
