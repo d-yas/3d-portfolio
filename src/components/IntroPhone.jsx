@@ -8,17 +8,23 @@ import AppsPhone from "./AppsPhone";
 import React, { useState } from "react";
 
 const IntroPhone = () => {
-  const [selectedApp, setSelectedApp] = useState(null); 
+  const [selectedApp, setSelectedApp] = useState(null);
 
   return (
     <Html
-        transform
-        distanceFactor={0.82}
-        position={[0.16, 1.25,0.08 ]}
-        
-      >
-    <div className="w-[44rem] h-[102rem] border-none rounded-2xl">
-      
+      transform
+      distanceFactor={0.82}
+      position={[0.16, 1.25, 0.08]}
+      style={{
+        width: "44rem",
+        height: "102rem",
+       
+        overflow: "hidden", // Ensuring content doesn't overflow
+       
+       
+      }}
+    >
+      <div className="w-[44rem] h-[102rem] border-none rounded-2xl">
         <img
           src="./bg-grad.jpeg"
           alt="Desktop"
@@ -26,14 +32,14 @@ const IntroPhone = () => {
         />
         <div className="flex flex-col items-center absolute inset-0 text-7xl">
           <HeaderPhone />
-          <AppsPhone onAppClick={setSelectedApp} selectedApp={selectedApp} /> 
+          <AppsPhone onAppClick={setSelectedApp} selectedApp={selectedApp} />
           {selectedApp === "profile" && <ProfilePhone />}
-          {selectedApp === "web" && <DataPhone />} {/* Ters oldu karıştırmıcam data -> web */}
+          {selectedApp === "web" && <DataPhone />}{" "}
+          {/* Ters oldu karıştırmıcam data -> web */}
           {selectedApp === "data" && <WebPhone />}
           <FooterPhone />
         </div>
-      
-    </div>
+      </div>
     </Html>
   );
 };

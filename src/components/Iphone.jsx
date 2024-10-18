@@ -18,7 +18,7 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
     rotation: isClicked
       ? [-0.19, 25 * (Math.PI / 180), 0.075]
       : [-Math.PI / 2, 0, -0.3],
-    config: { tension: 120, friction: 20 },
+    config: { tension: 100, friction: 20 },
   });
   
 /* stop propaganiation on phone and canvas wrpaaer */
@@ -198,7 +198,10 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
             position={[-0.658, 0.208, -0.002]}
           />
         </group>
+        
         {isVisible && <IntroPhone />}
+
+
       </animated.group>
       <animated.mesh
         position={[0.17, 0.7, -0.3]}
