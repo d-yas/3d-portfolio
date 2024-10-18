@@ -20,7 +20,7 @@ const Scene = () => {
   const updateSmoothTime = () => {
     setTimeout(() => {
       setSmoothTime(0.05); // Set smoothTime to 0.5 after 2 seconds
-    }, 2700); // 2000 milliseconds = 2 seconds
+    }, 2600); // 2000 milliseconds = 2 seconds
   };
 
   useEffect(() => {

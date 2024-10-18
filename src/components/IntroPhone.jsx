@@ -20,8 +20,7 @@ const IntroPhone = () => {
         height: "102rem",
        
         overflow: "hidden", // Ensuring content doesn't overflow
-       
-       
+        objectFit:"contain"
       }}
     >
       <div className="w-[44rem] h-[102rem] border-none rounded-2xl">

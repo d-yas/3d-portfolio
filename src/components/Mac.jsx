@@ -7,7 +7,7 @@ import {
   Outlines,
   Html
 } from "@react-three/drei";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { a, useSpring } from "@react-spring/three"; // Importing animated components from react-spring
 
 import Intro from "./Intro";
@@ -18,19 +18,28 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
     "https://threejs-journey.com/resources/models/macbook_model.gltf"
   );
 
+  
   const isMobile = () => window.innerWidth < 768;
   const [clicked, setClicked] = useState(false);
   const [showIntro, setShowIntro] = useState(false);
-
+  const [showText3D, setShowText3D] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const textRef = useRef();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowText3D(true); // Set to true after 2 seconds
+    }, 2600);
+
+    return () => clearTimeout(timer); // Clean up the timer on component unmount
+  }, []);
 
   /* Animation */
   const { scale, position, rotation } = useSpring({
     scale: clicked ? 0.165 : 0.025,
     position: clicked ? [0.737, 0.8, 1.43] : [0, 0.642, -0.28],
     rotation: clicked ? [0, 0.45, 0] : [0.04, 0, 0.05],
-    config: { tension: 100, friction: 20 },
+    config: { tension: 300, friction: 50 },
   });
 
   const handleClick = () => {
@@ -88,25 +97,25 @@ const Mac = ({ onClick, cameraControlsRef, disableCameraControls }) => {
         <boxGeometry />
         <meshStandardMaterial color="red" />
       </mesh>
-      {!isMobile() && <Text3D
-        position={[-0.07, 0.73, -0.28]}
-        rotation={[0, 0.3, 0]}
-        font={"./code-font.json"}
-        size={0.62}
-        scale={0.022}
-        letterSpacing={0.01}
-        lineHeight={0.18}
-        height={0.2}
-        ref={textRef}
-        onClick={handleClick}
-        visible={isVisible}
-      >
-        
-         {` CLICK\n\n\n\n\n\n   |\n\n   |\n   v`} 
-
-        <meshBasicMaterial />
-        <Outlines thickness={2} color="black" />
-      </Text3D>}
+      {!isMobile() && showText3D && (
+        <Text3D
+          position={[-0.07, 0.73, -0.28]}
+          rotation={[0, 0.3, 0]}
+          font={"./code-font.json"}
+          size={0.62}
+          scale={0.022}
+          letterSpacing={0.01}
+          lineHeight={0.18}
+          height={0.2}
+          ref={textRef}
+          onClick={handleClick}
+          visible={isVisible}
+        >
+          {` CLICK\n\n\n\n\n\n   |\n\n   |\n   v`}
+          <meshBasicMaterial />
+          <Outlines thickness={2} color="black" />
+        </Text3D>
+      )}
 
       <a.primitive
         object={computer.scene}

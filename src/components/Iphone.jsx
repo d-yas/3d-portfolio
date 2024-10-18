@@ -1,8 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Html, Outlines, Text3D, useGLTF } from "@react-three/drei";
 import { animated, useSpring } from "@react-spring/three"; // Import the animated and useSpring from react-spring
 import IntroPhone from "./IntroPhone";
 import { useFrame } from "@react-three/fiber";
+
 
 
 const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
@@ -10,6 +11,7 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
   const [isClicked, setIsClicked] = useState(false); // State to track the click event
   const [isVisible, setIsVisible] = useState(false);
   const [active, setActive] = useState(false);
+  const [textVisible, setTextVisible] = useState(false);
   const textRef = useRef();
 
   const springProps = useSpring({
@@ -18,10 +20,9 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
     rotation: isClicked
       ? [-0.19, 25 * (Math.PI / 180), 0.075]
       : [-Math.PI / 2, 0, -0.3],
-    config: { tension: 100, friction: 20 },
+    config: { tension: 300, friction: 40 },
   });
   
-/* stop propaganiation on phone and canvas wrpaaer */
   const handleClick = () => {
     setActive(!active);
     setIsVisible(!isVisible);
@@ -41,6 +42,15 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
     );
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTextVisible(true); 
+    }, 2600);
+
+  
+    return () => clearTimeout(timer);
+  }, []);
+  
   useFrame((state, dt) => {
     if (textRef.current) {
       textRef.current.position.y +=
@@ -56,17 +66,20 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
       <animated.group {...props} {...springProps} dispose={null}>
         <group position={[0, 1.563, 0]}>
           
-          <mesh>
+          <mesh position={[0.1, 2.8, -3]} onClick={(event) => {
+              event.stopPropagation(); 
+              handleClick(); 
+            }} visible={false}>
               <boxGeometry/>
               <meshBasicMaterial color={"orange"}/>
           </mesh>
           
           <Text3D
-            position={[-0.58, 2.8, -4]}
+            position={[-0.67, 2.3, -2]}
             rotation={[0.3, 0, 0]}
             font={"./code-font.json"}
             size={0.4}
-            scale={0.7}
+            scale={0.5}
             letterSpacing={0.01}
             lineHeight={0.18}
             height={0.2}
@@ -210,28 +223,28 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
           event.stopPropagation(); 
           handleClick(); 
         }}
-        visible={true}
+        visible={false}
       >
         <boxGeometry />
         <meshBasicMaterial />
       </animated.mesh>
-      <Text3D
-        position={[0.06, 0.725, -0.34]}
-        rotation={[0, 0.1, 0]}
-        font={"./code-font.json"}
-        size={0.06}
-        scale={0.22}
-        letterSpacing={0.01}
-        lineHeight={0.18}
-        height={0.03}
-        ref={textRef}
-      >
-        
-         {` CLICK\n\n\n\n\n\n   |\n\n   |\n   v`} 
-
-        <meshBasicMaterial />
-        <Outlines thickness={2} color="black" />
-      </Text3D>
+      {textVisible && ( // Conditional rendering based on textVisible state
+        <Text3D
+          position={[0.06, 0.725, -0.34]}
+          rotation={[0, 0.1, 0]}
+          font={"./code-font.json"}
+          size={0.06}
+          scale={0.22}
+          letterSpacing={0.01}
+          lineHeight={0.18}
+          height={0.03}
+          ref={textRef}
+        >
+          {` CLICK\n\n\n\n\n\n   |\n\n   |\n   v`}
+          <meshBasicMaterial />
+          <Outlines thickness={2} color="black" />
+        </Text3D>
+      )}
     </>
   );
 };

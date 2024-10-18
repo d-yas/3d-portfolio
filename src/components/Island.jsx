@@ -7,6 +7,8 @@ export function Island(props) {
   const bakedTexture = useTexture("baked.jpg");
   bakedTexture.flipY = false; // Ensure the texture is not flipped
 
+  
+
   return (
     <group {...props} dispose={null}>
       <Text3D
