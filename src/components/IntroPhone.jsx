@@ -13,21 +13,15 @@ const IntroPhone = () => {
   return (
     <Html
       transform
-      distanceFactor={0.82}
-      position={[0.16, 1.25, 0.08]}
-      style={{
-        width: "44rem",
-        height: "102rem",
-       
-        overflow: "hidden", // Ensuring content doesn't overflow
-        objectFit:"contain"
-      }}
+      distanceFactor={0.72}
+      position={[0.16, 1.47, 0.08]}
+      
     >
-      <div className="w-[44rem] h-[102rem] border-none rounded-2xl">
+      <div className="w-[52rem] h-[102rem] border-none rounded-2xl">
         <img
           src="./bg-grad.jpeg"
           alt="Desktop"
-          className="w-full h-[94%] fixed pointer-events-none rounded-[5rem]"
+          className="w-full h-full fixed pointer-events-none rounded-[5rem]"
         />
         <div className="flex flex-col items-center absolute inset-0 text-7xl">
           <HeaderPhone />

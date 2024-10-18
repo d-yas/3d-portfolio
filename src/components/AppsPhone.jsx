@@ -2,7 +2,7 @@ import React from "react";
 
 const AppsPhone = ({ onAppClick, selectedApp }) => {
   return (
-    <div className="flex items-start justify-start space-x-6 mt-20">
+    <div className="flex items-start justify-start space-x-9 mt-20">
       <div
         className="flex flex-col justify-center items-center cursor-pointer"
         onClick={() => onAppClick("data")}
