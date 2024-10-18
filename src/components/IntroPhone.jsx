@@ -5,17 +5,28 @@ import DataPhone from "./DataPhone";
 import FooterPhone from "./FooterPhone";
 import HeaderPhone from "./HeaderPhone";
 import AppsPhone from "./AppsPhone";
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 const IntroPhone = () => {
   const [selectedApp, setSelectedApp] = useState(null);
+  const [isIOS, setIsIOS] = useState(false);
+
+  // Check if the device is running iOS
+  useEffect(() => {
+    const userAgent = window.navigator.userAgent || window.navigator.vendor || window.opera;
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      setIsIOS(true);
+    }
+  }, []);
+
+  // Set the position based on whether the device is iOS or not
+  const htmlPosition = useMemo(() => (isIOS ? [0.05, 1.25, 0.08] : [0.16, 1.25, 0.08]), [isIOS]);
 
   return (
     <Html
       transform
       distanceFactor={0.82}
-      position={[0.16, 1.25, 0.08]}
-      
+      position={htmlPosition}
     >
       <div className="w-[44rem] h-[102rem] border-none rounded-2xl">
         <img
@@ -27,8 +38,7 @@ const IntroPhone = () => {
           <HeaderPhone />
           <AppsPhone onAppClick={setSelectedApp} selectedApp={selectedApp} />
           {selectedApp === "profile" && <ProfilePhone />}
-          {selectedApp === "web" && <DataPhone />}{" "}
-          {/* Ters oldu karıştırmıcam data -> web */}
+          {selectedApp === "web" && <DataPhone />}
           {selectedApp === "data" && <WebPhone />}
           <FooterPhone />
         </div>
