@@ -16,7 +16,7 @@ const IntroPhone = () => {
     <Html
       transform
       distanceFactor={1.28}
-      position={isIPhone ? [0, 1.34, 0.08] : [0.165, 1.34, 0.08]}
+      position={isIPhone ? [-0.6, 1.34, 0.08] : [0.165, 1.34, 0.08]}
     >
       <iframe
         src="https://3d-portfolio-mobile.vercel.app/"
