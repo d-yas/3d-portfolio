@@ -9,24 +9,13 @@ import React, { useState, useEffect, useMemo } from "react";
 
 const IntroPhone = () => {
   const [selectedApp, setSelectedApp] = useState(null);
-  const [isIOS, setIsIOS] = useState(false);
-
-  // Check if the device is running iOS
-  useEffect(() => {
-    const userAgent = window.navigator.userAgent || window.navigator.vendor || window.opera;
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      setIsIOS(true);
-    }
-  }, []);
-
-  // Set the position based on whether the device is iOS or not
-  const htmlPosition = useMemo(() => (isIOS ? [0.095, 1.23, 0.08] : [0.16, 1.25, 0.08]), [isIOS]);
+ 
 
   return (
     <Html
       transform
-      distanceFactor={1.22}
-      position={htmlPosition}
+      distanceFactor={1.28}
+      position={[0.165,1.34,0.08]}
     >
       {/* <div className="w-[44rem] h-[102rem] border-none rounded-2xl">
         <img
@@ -44,10 +33,10 @@ const IntroPhone = () => {
         </div>
       </div> */}
       <iframe
-    src="https://d-yas.github.io/Portfolio/"
-    width="440px"
-    height="1020px"
-    style={{ border: 'none' }}
+    src="https://3d-portfolio-mobile.vercel.app/"
+    width="465px"
+    height="1010px"
+    className={`rounded-[4rem]`}
   />
     </Html>
   );
