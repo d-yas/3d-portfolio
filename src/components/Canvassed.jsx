@@ -7,7 +7,8 @@ const Canvassed = () => {
   return (
     <>
       <Section three>
-        
+        <CanvasWrapper>
+
           <Canvas
           dpr={[1,2]}
             camera={{
@@ -20,6 +21,7 @@ const Canvassed = () => {
             <color attach="background" args={["#000000"]} />
             <Scene />
           </Canvas>
+        </CanvasWrapper>
         
       </Section>
     </>
