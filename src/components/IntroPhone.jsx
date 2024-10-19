@@ -17,12 +17,14 @@ const IntroPhone = () => {
       transform
       distanceFactor={1.28}
       position={isIPhone ? [-0.3, 1.34, 0.08] : [0.165, 1.34, 0.08]}
+      pointerEvents="auto"
     >
       <iframe
         src="https://3d-portfolio-mobile.vercel.app/"
         width="465px"
         height="1010px"
-        className="rounded-[4rem]"
+        className="rounded-[4rem] pointer-events-auto z-[9494]"
+        allow="fullscreen"
       />
     </Html>
   );
