@@ -14,3 +14,13 @@
 * {
   scroll-behavior: smooth;
 }
+
+body {
+  height: 100vh;
+}
+
+@supports (height: 100lvh) {
+  body {
+    height: 100lvh;
+  }
+}
