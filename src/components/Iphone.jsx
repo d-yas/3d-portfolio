@@ -15,7 +15,7 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
   const textRef = useRef();
 
   const springProps = useSpring({
-    scale: isClicked ? [0.26, 0.26, 0.26] : [0.012, 0.012, 0.012],
+    scale: isClicked ? [0.24, 0.24, 0.24] : [0.012, 0.012, 0.012],
     position: isClicked ? [0.327, 0.5, 0.8] : [0.14, 0.66, -0.3],
     rotation: isClicked
       ? [-0.19, 25 * (Math.PI / 180), 0.075]
