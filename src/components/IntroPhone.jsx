@@ -25,7 +25,7 @@ const IntroPhone = () => {
         src="https://3d-portfolio-mobile.vercel.app/"
         width="465px"
         height="1010px"
-        className="rounded-[4rem] absolute pointer-events-auto z-[9494]"
+        className={`rounded-[4rem] absolute pointer-events-auto z-[9494] ${isIPhone ? "mt-3 " : ""}`}
         
       />
     </Html>
