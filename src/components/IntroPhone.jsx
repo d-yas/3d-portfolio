@@ -16,8 +16,8 @@ const IntroPhone = () => {
     <Html
       transform
       distanceFactor={1.28}
-      position={[-0.57, 2.96, 0.08]}
-      /* position={isIPhone ? [-0.525, 1.34, 0.08] : [0.165, 1.34, 0.08]} */
+    
+      position={isIPhone ? [-0.62, 2.88, 0.08] : [-0.57, 2.96, 0.08]} 
       pointerEvents="auto"
       
     >
@@ -25,7 +25,7 @@ const IntroPhone = () => {
         src="https://3d-portfolio-mobile.vercel.app/"
         width="465px"
         height="1010px"
-        className={`rounded-[4rem] absolute pointer-events-auto z-[9494] ${isIPhone ? "mt-3 " : ""}`}
+        className={`rounded-[4rem] absolute pointer-events-auto z-[9494]`}
         
       />
     </Html>
