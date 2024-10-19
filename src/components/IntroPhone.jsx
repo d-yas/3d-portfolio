@@ -16,7 +16,7 @@ const IntroPhone = () => {
     <Html
       transform
       distanceFactor={1.28}
-      position={[0.165, 1.34, 0.08]}
+      position={[-0.365, 1.34, 0.08]}
       pointerEvents="auto"
     >
       <iframe
