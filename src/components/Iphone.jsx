@@ -16,7 +16,7 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
 
   const springProps = useSpring({
     scale: isClicked ? [0.26, 0.26, 0.26] : [0.012, 0.012, 0.012],
-    position: isClicked ? [0.327, 0.45, 0.8] : [0.14, 0.66, -0.3],
+    position: isClicked ? [0.327, 0.5, 0.8] : [0.14, 0.66, -0.3],
     rotation: isClicked
       ? [-0.19, 25 * (Math.PI / 180), 0.075]
       : [-Math.PI / 2, 0, -0.3],
@@ -75,10 +75,10 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
           </mesh>
           
           <Text3D
-            position={[-0.67, 2.3, -2]}
+            position={[-0.29, 2.1, -2]}
             rotation={[0.3, 0, 0]}
             font={"./code-font.json"}
-            size={0.4}
+            size={0.25}
             scale={0.5}
             letterSpacing={0.01}
             lineHeight={0.18}
