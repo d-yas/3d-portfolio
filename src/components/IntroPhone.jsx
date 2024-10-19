@@ -25,10 +25,10 @@ const IntroPhone = () => {
   return (
     <Html
       transform
-      distanceFactor={0.82}
+      distanceFactor={1.22}
       position={htmlPosition}
     >
-      <div className="w-[44rem] h-[102rem] border-none rounded-2xl">
+      {/* <div className="w-[44rem] h-[102rem] border-none rounded-2xl">
         <img
           src="./bg-grad.jpeg"
           alt="Desktop"
@@ -42,7 +42,13 @@ const IntroPhone = () => {
           {selectedApp === "data" && <WebPhone />}
           <FooterPhone />
         </div>
-      </div>
+      </div> */}
+      <iframe
+    src="https://d-yas.github.io/Portfolio/"
+    width="440px"
+    height="1020px"
+    style={{ border: 'none' }}
+  />
     </Html>
   );
 };
