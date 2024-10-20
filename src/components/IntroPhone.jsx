@@ -25,7 +25,7 @@ const IntroPhone = () => {
         src="https://3d-portfolio-mobile.vercel.app/"
         width="465px"
         height="1010px"
-        className={`rounded-[3rem] absolute pointer-events-auto z-[9494]`} /* Absolute kilit oldu */
+        className={`rounded-[3rem] absolute pointer-events-auto h-[63.2rem] z-[9494]`} /* Absolute kilit oldu */
         
       />
     </Html>
