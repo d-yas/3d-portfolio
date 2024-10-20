@@ -17,7 +17,7 @@ const IntroPhone = () => {
       transform
       distanceFactor={isIPhone ? 1.34 : 1.27} 
       
-      position={isIPhone ? [-0.7, 2.96, 0.08] : [-0.57, 2.94, 0.08]} 
+      position={isIPhone ? [-0.68, 2.96, 0.08] : [-0.57, 2.94, 0.08]} 
       pointerEvents="auto"
       
     >
