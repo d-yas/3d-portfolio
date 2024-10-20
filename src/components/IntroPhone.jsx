@@ -15,7 +15,7 @@ const IntroPhone = () => {
   return (
     <Html
       transform
-      distanceFactor={isIPhone ? 1.35 : 1.27} 
+      distanceFactor={isIPhone ? 1.37 : 1.27} 
       
       position={isIPhone ? [-0.68, 2.96, 0.08] : [-0.57, 2.94, 0.08]} 
       pointerEvents="auto"
