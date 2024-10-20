@@ -18,7 +18,7 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
     scale: isClicked ? [0.24, 0.24, 0.24] : [0.012, 0.012, 0.012],
     position: isClicked ? [0.327, 0.5, 0.8] : [0.14, 0.66, -0.3],
     rotation: isClicked
-      ? [-0.19, 25 * (Math.PI / 180), 0.075]
+      ? [-0.28, 25 * (Math.PI / 180), 0.11]
       : [-Math.PI / 2, 0, -0.3],
     config: { tension: 300, friction: 40 },
   });
@@ -63,7 +63,7 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
 
   return (
     <>
-      <animated.group {...props} {...springProps} dispose={null}>
+      <animated.group {...props} {...springProps} dispose={null} >
         <group position={[0, 1.563, 0]}>
           
           <mesh position={[0.1, 2.8, -3]} onClick={(event) => {
@@ -75,7 +75,7 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
           </mesh>
           
           <Text3D
-            position={[-0.29, 2.1, -2]}
+            position={[-0.29, 2.3, -2]}
             rotation={[0.3, 0, 0]}
             font={"./code-font.json"}
             size={0.25}
