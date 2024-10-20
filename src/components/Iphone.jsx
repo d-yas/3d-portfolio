@@ -18,7 +18,7 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
     scale: isClicked ? [0.24, 0.24, 0.24] : [0.012, 0.012, 0.012],
     position: isClicked ? [0.327, 0.5, 0.8] : [0.14, 0.66, -0.3],
     rotation: isClicked
-      ? [-0.28, 25 * (Math.PI / 180), 0.11]
+      ? [-0.19, 25 * (Math.PI / 180), 0.075]
       : [-Math.PI / 2, 0, -0.3],
     config: { tension: 300, friction: 40 },
   });
@@ -63,7 +63,7 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
 
   return (
     <>
-      <animated.group {...props} {...springProps} dispose={null} >
+      <animated.group {...props} {...springProps} dispose={null} rotation={[-0.28, 25 * (Math.PI / 180), 0.11]}>
         <group position={[0, 1.563, 0]}>
           
           <mesh position={[0.1, 2.8, -3]} onClick={(event) => {
