@@ -63,7 +63,7 @@ const Iphone = ({ cameraControlsRef, disableCameraControls, ...props }) => {
 
   return (
     <>
-      <animated.group {...props} {...springProps} dispose={null} rotation={[-0.28, 25 * (Math.PI / 180), 0.11]}>
+      <animated.group {...props} {...springProps} dispose={null} >
         <group position={[0, 1.563, 0]}>
           
           <mesh position={[0.1, 2.8, -3]} onClick={(event) => {
