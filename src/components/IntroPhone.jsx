@@ -22,7 +22,7 @@ const IntroPhone = () => {
       
     >
       <iframe
-        src="https://3d-portfolio-mobile.vercel.app/"
+        src="https://d-yas.github.io/Portfolio/"
         width="465px"
         height="1010px"
         className={`rounded-[3rem] absolute pointer-events-auto h-[63.2rem] z-[9494]`} /* Absolute kilit oldu */
